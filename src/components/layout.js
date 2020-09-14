@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    color: rgba(0, 0, 0, 0.80);
   }
 `
 
