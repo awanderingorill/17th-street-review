@@ -75,7 +75,7 @@ const IndexPage = () => (
   <Layout>
     <GlobalFonts />
     <SEO title="17th Street Review"/>
-    <StaticQuery
+    {/* <StaticQuery
       query={graphql`
         query {
           gcms {
@@ -101,7 +101,7 @@ const IndexPage = () => (
           </ul>
         </div>
       )}
-    />
+    /> */}
   </Layout>
 )
 export default IndexPage
