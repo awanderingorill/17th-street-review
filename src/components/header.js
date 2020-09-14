@@ -1,32 +1,27 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "styled-components"
+
+const Logo = styled.h1`
+  font-family: "Souvenir";
+  font-size: 40px;
+  line-height: 92.3%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.80);
+  text-decoration: none;
+  width: 300px;
+`
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+  <header>
+    <div>
+        <Link to="/">
+          <Logo>
+            {siteTitle}
+          </Logo>
         </Link>
-      </h1>
     </div>
   </header>
 )

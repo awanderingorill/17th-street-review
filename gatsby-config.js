@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `17th Street Review`,
+    description: `A new literary magazine.`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -30,5 +30,17 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-graphql",
+          options: {
+          // The top level query type, can be anything you want!
+          typeName: "GCMS",
+          // The field you'll query against, can also be anything you want.
+          fieldName: "gcms",
+          // Your API endpoint, available from the dashboard and settings window.
+          url: "https://api-us-east-1.graphcms.com/v2/ckf00vhe27ppl01z5cohgdazz/master",
+      },
+    },
+    `gatsby-plugin-styled-components`
   ],
 }

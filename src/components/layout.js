@@ -8,9 +8,22 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
-import "./layout.css"
+// import "./layout.css"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: rgba(0, 0, 0, 0.80);
+    background: #FFFBF4;
+    font-family: "Clearface";
+  }
+
+  a {
+    text-decoration: none;
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +38,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
