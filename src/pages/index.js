@@ -55,7 +55,7 @@ const IndexContainer = styled.div`
 
 const IntroWrapper = styled.div`
   margin: 5em 0 3em 0;
-  max-width: 40vw;
+  max-width: 45vw;
 `
 
 const IntroTitle = styled.p`
@@ -76,7 +76,35 @@ const Intro = props => (
 const IntroImg = styled.img`
   max-width: 60vw;
   position: relative;
+  z-index: -1;
 `
+
+const StoryWrapper = styled.div`
+  margin: 5em 0 3em 0;
+  max-width: 45vw;
+`
+
+const StoryTitle = styled.p`
+  font-family: "Souvenir";
+  font-size: 25px;
+  text-align: center;
+`
+
+const StoryAuthor = styled.p`
+  text-align: center;
+`
+
+const StoryContent = styled.div`
+`
+
+const Story = props => (
+  <StoryWrapper>
+    <StoryTitle>{props.storyTitle}</StoryTitle>
+    <StoryAuthor>{props.storyAuthor}</StoryAuthor>
+    <StoryContent dangerouslySetInnerHTML={{ __html: props.storyContent }} />
+  </StoryWrapper>
+)
+
 // export default function UsersList() {
 //   return (
 //     <Container>
@@ -115,23 +143,42 @@ const IndexPage = () => (
                           }
                         }
                       }
+                      gcms {
+                        stories(first: 1) {
+                          title
+                          author
+                          content {
+                            html
+                          }
+                        }
+                      }
                   }
               `}
               render={data => (
-                  <div>
+                  <IndexContainer>
                       {data.gcms.pages.map(page => {
                           const { subtitle, content, homeImage } = page
                           return (
-                            <IndexContainer>
+                            <>
                               <Intro
                                 subTitle={subtitle}
                                 indexContent={content.text}
                               />
                               <IntroImg src={homeImage.url}/>
-                            </IndexContainer>
+                            </>
                           )
                       })}
-                  </div>
+                      {data.gcms.stories.map(story => {
+                          const { title, author, content } = story
+                          return (
+                            <Story
+                              storyTitle={title}
+                              storyAuthor={author}
+                              storyContent={content.html}
+                            />
+                          )
+                      })}
+                  </IndexContainer>
               )}
           />
   </Layout>

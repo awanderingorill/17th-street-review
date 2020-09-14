@@ -24,6 +24,7 @@ const Logo = styled.h1`
   width: 300px;
   margin: 0;
   padding: 2rem;
+  z-index: 1000;
 `
 
 const ArchiveAndAbout = styled.ul`
