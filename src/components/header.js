@@ -4,7 +4,7 @@ import React from "react"
 import styled from "styled-components"
 
 const HeaderWrapper = styled.header`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
