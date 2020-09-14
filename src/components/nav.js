@@ -5,10 +5,14 @@ import styled from "styled-components"
 import { StaticQuery } from "gatsby"
 
 const NavWrapper = styled.ul`
-  font-size: 16px;
-  list-style: none;
-  margin: 0;
-  padding: 2rem;
+    font-size: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
 `
 
 const NavItemWrapper = styled.li`
@@ -16,27 +20,21 @@ const NavItemWrapper = styled.li`
 
 const StoryTitle = styled.p`
     font-family: "Souvenir";
+    margin: 0 0 0.5rem 0;
 `
 
 const StoryAuthor = styled.p`
+    margin: 0 0 2rem 0;
 `
 
 const NavItem = props => (
     <NavItemWrapper>
-        <Link to={props.slug}>
+        <a href={props.slug}>
             <StoryTitle>{props.title}</StoryTitle>
             <StoryAuthor>{props.author}</StoryAuthor>
-        </Link>
+        </a>
     </NavItemWrapper>
 )
-
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
 
 export default function Nav () {
     return (
@@ -57,7 +55,7 @@ export default function Nav () {
                         const { title, author } = story
                         return (
                             <NavItem title={title} author={author} />
-                    )
+                        )
                     })}
                 </NavWrapper>
             )}

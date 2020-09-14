@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     color: rgba(0, 0, 0, 0.80);
     background: #FFFBF4;
     font-family: "Clearface";
+    font-size: 18px;
   }
 
   a {

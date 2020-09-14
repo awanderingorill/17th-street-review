@@ -42,15 +42,35 @@ const Username = styled.h2`
 const Excerpt = styled.p`
   margin: 0;
 `
-const User = props => (
-  <UserWrapper>
-    <Avatar src={props.avatar} alt="" />
-    <Description>
-      <Username>{props.username}</Username>
-      <Excerpt>{props.excerpt}</Excerpt>
-    </Description>
-  </UserWrapper>
+// const User = props => (
+//   <UserWrapper>
+//     <Avatar src={props.avatar} alt="" />
+//     <Description>
+//       <Username>{props.username}</Username>
+//       <Excerpt>{props.excerpt}</Excerpt>
+//     </Description>
+//   </UserWrapper>
+// )
+
+const IntroWrapper = styled.div`
+  max-width: 40vw;
+`
+
+const IntroTitle = styled.p`
+  font-family: "Souvenir";
+  font-size: 25px;
+`
+
+const IntroContent = styled.p`
+`
+
+const Intro = props => (
+  <IntroWrapper>
+    <IntroTitle>{props.subTitle}</IntroTitle>
+    <IntroContent>{props.indexContent}</IntroContent>
+  </IntroWrapper>
 )
+
 // export default function UsersList() {
 //   return (
 //     <Container>
@@ -75,33 +95,39 @@ const IndexPage = () => (
   <Layout>
     <GlobalFonts />
     <SEO title="17th Street Review"/>
-    {/* <StaticQuery
-      query={graphql`
-        query {
-          gcms {
-            stories {
-              title
-              author
-            }
-          }
-        }
-      `}
-      render={data => (
-        <div>
-          <h1>Stories</h1>
-          <ul>
-            {data.gcms.stories.map(story => {
-              const { title, author } = story
-              return (
-                <li>
-                  <strong>{title}</strong> by {author}
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      )}
-    /> */}
+    <Container>
+      <StaticQuery
+              query={graphql`
+                  query {
+                      gcms {
+                        pages(where: {slug: "/"}) {
+                          subtitle
+                          homeImage {
+                            url
+                          }
+                          content {
+                            text
+                          }
+                        }
+                      }
+                  }
+              `}
+              render={data => (
+                  <div>
+                      {data.gcms.pages.map(page => {
+                          const { subtitle, content } = page
+                          return (
+                            <Intro
+                              subTitle={subtitle}
+                              indexContent={content.text}
+                            />
+                          )
+                      })}
+                  </div>
+              )}
+          />
+    </Container>
   </Layout>
 )
+
 export default IndexPage
