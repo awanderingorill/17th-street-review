@@ -144,7 +144,7 @@ const IndexPage = () => (
                         }
                       }
                       gcms {
-                        stories(first: 1) {
+                        stories(where: {homepageStory: true}) {
                           title
                           author
                           content {

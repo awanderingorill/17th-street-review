@@ -9,7 +9,7 @@ const NavWrapper = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 50%;
     transform: translate(-50%, -50%);
