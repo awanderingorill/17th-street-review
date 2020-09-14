@@ -8,14 +8,6 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const Container = styled.div`
-  margin: 3rem auto;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
 const UserWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -52,7 +44,17 @@ const Excerpt = styled.p`
 //   </UserWrapper>
 // )
 
+
+const IndexContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  max-width: 70vw;
+`
+
 const IntroWrapper = styled.div`
+  margin: 5em 0 3em 0;
   max-width: 40vw;
 `
 
@@ -71,6 +73,10 @@ const Intro = props => (
   </IntroWrapper>
 )
 
+const IntroImg = styled.img`
+  max-width: 60vw;
+  position: relative;
+`
 // export default function UsersList() {
 //   return (
 //     <Container>
@@ -95,7 +101,6 @@ const IndexPage = () => (
   <Layout>
     <GlobalFonts />
     <SEO title="17th Street Review"/>
-    <Container>
       <StaticQuery
               query={graphql`
                   query {
@@ -115,18 +120,20 @@ const IndexPage = () => (
               render={data => (
                   <div>
                       {data.gcms.pages.map(page => {
-                          const { subtitle, content } = page
+                          const { subtitle, content, homeImage } = page
                           return (
-                            <Intro
-                              subTitle={subtitle}
-                              indexContent={content.text}
-                            />
+                            <IndexContainer>
+                              <Intro
+                                subTitle={subtitle}
+                                indexContent={content.text}
+                              />
+                              <IntroImg src={homeImage.url}/>
+                            </IndexContainer>
                           )
                       })}
                   </div>
               )}
           />
-    </Container>
   </Layout>
 )
 
