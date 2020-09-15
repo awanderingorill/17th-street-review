@@ -44,8 +44,7 @@ const IssueImg = styled.img`
 
   @media ${device.mobileL} {
     max-width: 80vw;
-    height: auto;
-    margin-left: 2rem;
+    height: auto !important;
   }
 `
 
@@ -70,14 +69,18 @@ const ArchiveNav = styled.div`
 `
 
 const StoryListWrapper = styled.ul`
-  display: flex;
-  flex-flow: column wrap;
-  max-height: 230px;
-  position: relative;
-  width: fit-content;
-  transform: none;
-  width: 70vw;
   padding: 0;
+
+  @media ${device.mobileL} {
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 230px;
+    position: relative;
+    width: fit-content;
+    transform: none;
+    width: 80vw;
+    padding: 0;
+  }
 `
 
 const StoryListItemWrapper = styled.li`
