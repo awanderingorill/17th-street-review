@@ -88,10 +88,12 @@ const StoryTitle = styled.p`
   font-family: "Souvenir";
   font-size: 25px;
   text-align: center;
+  margin-bottom: 0;
 `
 
 const StoryAuthor = styled.p`
   text-align: center;
+  margin-top: 0;
 `
 
 const StoryContent = styled.div`
