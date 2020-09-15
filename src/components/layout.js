@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
 const Footer = styled.footer`
   @media ${device.mobileL} {
     font-size: 16px;
-    margin: 3rem;
+    margin: 2rem;
   }
 `
 
