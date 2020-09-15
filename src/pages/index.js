@@ -49,7 +49,7 @@ const IssueTitle = styled.p`
   }
 `
 
-const IssueContent = styled.p`
+const IssueContent = styled.div`
   @media ${device.mobileL} {
     font-size: 16px;
   }
