@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import ClearFaceWoff from './ClearFaceStd-Regular.woff';
+import ClearFaceWoff from "./ClearFaceStd-Regular.woff";
 import SouvenirWoff from "./Souvenir-Demi.woff";
 
 export default createGlobalStyle`
