@@ -21,7 +21,6 @@ const StoryPage = ({ pageContext }) => {
       <Layout>
         <GlobalFonts />
         <SEO title={story.title}/>
-        <Nav/>
         <StoryPageContainer>
             <Story
                 storyTitle={story.title}
@@ -29,6 +28,7 @@ const StoryPage = ({ pageContext }) => {
                 storyContent={story.content.html}
             />
         </StoryPageContainer>
+        <Nav/>
       </Layout>
     )
   }
