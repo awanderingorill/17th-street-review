@@ -20,7 +20,7 @@ const NavItemWrapper = styled.li`
 
 const StoryTitle = styled.p`
     font-family: "Souvenir";
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.2rem 0;
 `
 
 const StoryAuthor = styled.p`

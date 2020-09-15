@@ -45,7 +45,7 @@ const IntroImg = styled.img`
 const IndexPage = () => (
   <Layout>
     <GlobalFonts />
-    <SEO title="17th Street Review"/>
+    <SEO title={"17th Street Review"}/>
       <StaticQuery
               query={graphql`
                   query {
