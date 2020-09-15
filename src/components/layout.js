@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
 
   footer {
     text-align: center;
+    margin-bottom: 3rem;
   }
 `
 
@@ -66,7 +67,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       {children}
       <footer>
-        © {new Date().getFullYear()}
+        © {new Date().getFullYear()} 17th Street Review
       </footer>
     </SiteWrapper>
   )
