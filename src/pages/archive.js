@@ -24,7 +24,7 @@ const ArchiveHeader = styled.p`
 
   @media ${device.mobileL} {
     font-size: 20px;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
   }
 `
 
@@ -43,8 +43,7 @@ const IssueImg = styled.img`
   max-height: 100vh;
 
   @media ${device.mobileL} {
-    max-width: 80vw;
-    height: auto !important;
+    display: none;
   }
 `
 
@@ -64,7 +63,7 @@ const ArchiveNav = styled.div`
   margin-left: 3em;
 
   @media ${device.mobileL} {
-    margin-left: 2em;
+    margin-left: 0;
   }
 `
 
@@ -80,6 +79,7 @@ const StoryListWrapper = styled.ul`
     transform: none;
     width: 80vw;
     padding: 0;
+    margin-bottom: 0;
   }
 `
 
