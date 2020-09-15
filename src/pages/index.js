@@ -34,14 +34,26 @@ const IntroWrapper = styled.div`
     max-width: 70vw;
     margin: 0;
   }
+
+  @media ${device.mobileL} {
+    max-width: 80vw;
+  }
 `
 
 const IntroTitle = styled.p`
   font-family: "Souvenir";
   font-size: 25px;
+
+  @media ${device.mobileL} {
+    font-size: 20px;
+    margin-top: 0;
+  }
 `
 
 const IntroContent = styled.p`
+  @media ${device.mobileL} {
+    font-size: 16px;
+  }
 `
 
 const Intro = props => (
@@ -55,9 +67,15 @@ const IntroImg = styled.img`
   max-width: 60vw;
   position: relative;
   z-index: -1;
+  margin-bottom: 4em;
 
   @media ${device.tablet} {
     max-width: 70vw;
+  }
+
+  @media ${device.mobileL} {
+    max-width: 80vw;
+    margin-bottom: 2em;
   }
 `
 

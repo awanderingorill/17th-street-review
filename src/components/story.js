@@ -9,6 +9,10 @@ const StoryWrapper = styled.div`
   @media ${device.tablet} {
     max-width: 70vw;
   }
+
+  @media ${device.mobileL} {
+    max-width: 80vw;
+  }
 `
 
 const StoryTitle = styled.p`
@@ -25,6 +29,9 @@ const StoryAuthor = styled.p`
 `
 
 const StoryContent = styled.div`
+  @media ${device.mobileL} {
+    font-size: 16px;
+  }
 `
 
 const Story = props => (

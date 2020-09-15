@@ -26,6 +26,10 @@ const Logo = styled.h1`
   margin: 0;
   padding: 2rem;
   z-index: 1000;
+
+  @media ${device.mobileL} {
+    font-size: 30px;
+  }
 `
 const ArchiveAndAbout = styled.ul`
   font-size: 16px;
@@ -36,6 +40,11 @@ const ArchiveAndAbout = styled.ul`
   @media ${device.tablet} {
     position: absolute;
     right: 0;
+  }
+
+  @media ${device.mobileL} {
+    font-size: 14px;
+    padding: 2rem 1rem;
   }
 `
 const Header = ({ siteTitle }) => (

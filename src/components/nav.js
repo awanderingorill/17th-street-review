@@ -18,15 +18,22 @@ const NavWrapper = styled.ul`
     @media ${device.tablet} { 
         display: flex;
         flex-flow: column wrap;
-        height: 230px;
+        max-height: 230px;
         position: relative;
         width: fit-content;
         transform: none;
         width: 70vw;
     }
+
+    @media ${device.mobileL} {
+        width: 80vw;
+    }
 `
 
 const NavItemWrapper = styled.li`
+    @media ${device.mobileL} {
+        max-width: 40vw;
+    }
 `
 
 const StoryTitle = styled.p`
@@ -36,10 +43,19 @@ const StoryTitle = styled.p`
     @media ${device.tablet} {
         margin: 0;
     }
+
+    @media ${device.mobileL} {
+        font-size: 16px;
+    }
 `
 
 const StoryAuthor = styled.p`
     margin: 0 0 2rem 0;
+
+    @media ${device.mobileL} {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
 `
 
 const NavItem = props => (
