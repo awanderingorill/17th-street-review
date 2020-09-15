@@ -20,7 +20,7 @@ const StoryTitle = styled.p`
   font-size: 25px;
   text-align: center;
   margin: 0;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 `
 
 const StoryAuthor = styled.p`

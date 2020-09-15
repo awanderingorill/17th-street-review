@@ -63,6 +63,12 @@ const Intro = props => (
   </IntroWrapper>
 )
 
+const NavAndImgWrapper = styled.div`
+  display: flex;
+  position: relative;
+  left: 150px;
+`
+
 const IntroImg = styled.img`
   max-width: 60vw;
   position: relative;
@@ -118,8 +124,10 @@ const IndexPage = () => (
                         subTitle={subtitle}
                         indexContent={content.text}
                       />
-                      <Nav/>
-                      <IntroImg src={homeImage.url}/>
+                      <NavAndImgWrapper>
+                        <IntroImg src={homeImage.url}/>
+                        <Nav/>
+                      </NavAndImgWrapper>
                     </>
                   )
               })}
