@@ -15,6 +15,13 @@ const StoryPageContainer = styled.div`
   max-width: 70vw;
 `
 
+const StoryPageNavWrapper = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY (-50%);
+`
+
 const StoryPage = ({ pageContext }) => {
     const [story, updateStory] = useState(pageContext.story)
     return (
@@ -28,7 +35,9 @@ const StoryPage = ({ pageContext }) => {
                 storyContent={story.content.html}
             />
         </StoryPageContainer>
-        <Nav/>
+        <StoryPageNavWrapper>
+         <Nav/>
+        </StoryPageNavWrapper>
       </Layout>
     )
   }
