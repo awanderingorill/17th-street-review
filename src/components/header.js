@@ -45,6 +45,7 @@ const ArchiveAndAbout = styled.ul`
   @media ${device.mobileL} {
     font-size: 14px;
     padding: 2rem 1rem;
+    right: 0;
   }
 `
 const Header = ({ siteTitle }) => (
