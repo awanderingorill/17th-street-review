@@ -1,13 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
-import ClearFaceWoff from "./ClearFaceStd-Regular.woff";
-import SouvenirWoff from "./Souvenir-Demi.woff";
+// import ClearFaceWoff from "./ClearFaceStd-Regular.woff";
+// import SouvenirWoff from "./Souvenir-Demi.woff";
 
 export default createGlobalStyle`
     @font-face {
         font-family: 'Clearface';
         src: local('Clearface'), local('Clearface'),
-        url(${ClearFaceWoff}) format('woff');
+        url("./ClearFaceStd-Regular.woff") format('woff');
         font-weight: 300;
         font-style: normal;
     }
@@ -15,7 +15,7 @@ export default createGlobalStyle`
     @font-face {
         font-family: 'Souvenir';
         src: local('Souvenir'), local('Souvenir'),
-        url(${SouvenirWoff}) format('woff');
+        url("./Souvenir-Demi.woff") format('woff');
         font-weight: 300;
         font-style: normal;
     }
