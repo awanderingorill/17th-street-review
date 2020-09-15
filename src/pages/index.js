@@ -82,6 +82,7 @@ const IntroImg = styled.img`
 const StoryWrapper = styled.div`
   margin: 5em 0 3em 0;
   max-width: 45vw;
+  margin-top: 2em;
 `
 
 const StoryTitle = styled.p`
