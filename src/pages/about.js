@@ -35,6 +35,10 @@ const AboutHeader = styled.p`
 
 const AboutContent = styled.div`
     margin-bottom: 2em;
+
+    @media ${device.mobileL} {
+        font-size: 16px;
+    }
 `
 
 const AboutPage = () => (

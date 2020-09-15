@@ -44,6 +44,7 @@ const IssueImg = styled.img`
 
   @media ${device.mobileL} {
     max-width: 80vw;
+    max-height: fit-content;
     margin-left: 2rem;
   }
 `
