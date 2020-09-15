@@ -1,10 +1,15 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "./device"
 
 const StoryWrapper = styled.div`
   margin: 5em 0 3em 0;
   max-width: 45vw;
   margin-top: 2em;
+
+  @media ${device.tablet} {
+    max-width: 70vw;
+  }
 `
 
 const StoryTitle = styled.p`

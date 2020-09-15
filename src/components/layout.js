@@ -9,9 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 
 import Header from "./header"
 import Nav from "./nav"
+import { device } from "./device"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -36,6 +38,16 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const SiteWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+
+  @media ${device.tablet} {
+    justify-content: center;
+    align-items: center;
+  }
+`
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -48,17 +60,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <SiteWrapper>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Nav />
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}
-        </footer>
-      </div>
-    </>
+      {children}
+      <footer>
+        © {new Date().getFullYear()}
+      </footer>
+    </SiteWrapper>
   )
 }
 

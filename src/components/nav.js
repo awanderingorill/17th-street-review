@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery } from "gatsby"
+import { device } from "./device"
 
 const NavWrapper = styled.ul`
     font-size: 18px;
@@ -13,6 +14,16 @@ const NavWrapper = styled.ul`
     right: 0;
     top: 50%;
     transform: translate(-50%, -50%);
+    
+    @media ${device.tablet} { 
+        display: flex;
+        flex-flow: column wrap;
+        height: 230px;
+        position: relative;
+        width: fit-content;
+        transform: none;
+        width: 70vw;
+    }
 `
 
 const NavItemWrapper = styled.li`
@@ -21,6 +32,10 @@ const NavItemWrapper = styled.li`
 const StoryTitle = styled.p`
     font-family: "Souvenir";
     margin: 0 0 0.2rem 0;
+
+    @media ${device.tablet} {
+        margin: 0;
+    }
 `
 
 const StoryAuthor = styled.p`

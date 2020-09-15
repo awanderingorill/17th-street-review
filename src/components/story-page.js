@@ -5,6 +5,7 @@ import GlobalFonts from "../fonts/fonts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Story from "../components/story"
+import Nav from "../components/nav"
 
 const StoryPageContainer = styled.div`
   display: flex;
@@ -20,6 +21,7 @@ const StoryPage = ({ pageContext }) => {
       <Layout>
         <GlobalFonts />
         <SEO title={story.title}/>
+        <Nav/>
         <StoryPageContainer>
             <Story
                 storyTitle={story.title}
