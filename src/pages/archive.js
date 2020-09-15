@@ -5,7 +5,7 @@ import GlobalFonts from "../fonts/fonts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const StoryPage = ({ pageContext }) => {
+const ArchivePage = ({ pageContext }) => {
     const [story, updateStory] = useState(pageContext.story)
     return (
       <Layout>
@@ -16,4 +16,4 @@ const StoryPage = ({ pageContext }) => {
     )
   }
 
-export default Archive
+export default ArchivePage
