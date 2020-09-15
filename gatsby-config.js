@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `17th Street Review`,
     description: `A new literary magazine.`,
-    author: `@gatsbyjs`,
+    author: `@awanderingorill`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

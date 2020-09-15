@@ -9,9 +9,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle } from "styled-components"
+import styled from "styled-components"
 
 import Header from "./header"
 import Nav from "./nav"
+import { device } from "./device"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     background: #FFFBF4;
     font-family: "Clearface";
     font-size: 18px;
+    line-height: 127.5%;
   }
 
   a {
@@ -26,8 +29,23 @@ const GlobalStyle = createGlobalStyle`
     color: #333231;
   }
 
+  a:hover {
+    transform: rotate(-4deg);
+  }
+
   footer {
     text-align: center;
+    margin-bottom: 3rem;
+  }
+`
+
+const SiteWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+
+  @media ${device.tablet} {
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -43,17 +61,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <SiteWrapper>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Nav />
-      <div>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}
-        </footer>
-      </div>
-    </>
+      {children}
+      <footer>
+        © {new Date().getFullYear()} 17th Street Review
+      </footer>
+    </SiteWrapper>
   )
 }
 

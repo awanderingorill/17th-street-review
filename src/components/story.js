@@ -1,17 +1,26 @@
 import React from "react"
 import styled from "styled-components"
+import { device } from "./device"
 
 const StoryWrapper = styled.div`
-  margin: 5em 0 3em 0;
+  margin: 0 0 3em 0;
   max-width: 45vw;
-  margin-top: 2em;
+
+  @media ${device.tablet} {
+    max-width: 70vw;
+  }
+
+  @media ${device.mobileL} {
+    max-width: 80vw;
+  }
 `
 
 const StoryTitle = styled.p`
   font-family: "Souvenir";
   font-size: 25px;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
 `
 
 const StoryAuthor = styled.p`
@@ -20,6 +29,9 @@ const StoryAuthor = styled.p`
 `
 
 const StoryContent = styled.div`
+  @media ${device.mobileL} {
+    font-size: 16px;
+  }
 `
 
 const Story = props => (
