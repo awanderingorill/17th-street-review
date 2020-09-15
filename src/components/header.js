@@ -31,7 +31,7 @@ const Logo = styled.h1`
     font-size: 30px;
   }
 `
-const ArchiveAndAbout = styled.ul`
+const HeaderNav = styled.ul`
   font-size: 16px;
   list-style: none;
   margin: 0;
@@ -55,7 +55,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Logo>
       </Link>
-      <ArchiveAndAbout>
+      <HeaderNav>
         <li>
           <Link to="/archive">
             Archive
@@ -66,7 +66,12 @@ const Header = ({ siteTitle }) => (
             About
           </Link>
         </li>
-      </ArchiveAndAbout>
+        <li>
+          <Link to="/submit">
+            Submit
+          </Link>
+        </li>
+      </HeaderNav>
   </HeaderWrapper>
 )
 

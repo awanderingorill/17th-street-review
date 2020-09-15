@@ -14,6 +14,10 @@ const StoryPageContainer = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
   max-width: 70vw;
+
+  @media ${device.mobileL} {
+    max-width: 80vw;
+  }
 `
 
 const StoryPageNavWrapper = styled.div`
