@@ -40,6 +40,9 @@ const IssueWrapper = styled.div`
   }
 `
 
+const IssueImgWrapper = styled.div`
+`
+
 const IssueImg = styled.img`
   max-width: 60vw;
   max-height: 100vh;
@@ -47,6 +50,13 @@ const IssueImg = styled.img`
   @media ${device.mobileL} {
     max-width: 80vw;
   }
+`
+
+const IssueImgBy = styled.p`
+  justify-content: flex-end;
+  display: flex;
+  font-size: 14px;
+  margin: 0;
 `
 
 const IssueTitle = styled.p`
@@ -136,7 +146,7 @@ const ArchivePage = () => (
       query={graphql`
         query {
           gcms {
-            issues {
+            issues(where: {currentIssue_not: true}) {
               title
               content {
                 html
@@ -144,9 +154,10 @@ const ArchivePage = () => (
               image {
                 url
               }
+              imageBy
               story {
-                author
                 title
+                author
                 slug
               }
             }
@@ -157,10 +168,16 @@ const ArchivePage = () => (
           <ArchiveContainer>
               <ArchiveHeader>Archive</ArchiveHeader>
               {data.gcms.issues.map(issue => {
-                  const { title, image, story } = issue
+                  const { title, image, imageBy, story } = issue
                   return (
                     <IssueWrapper>
-                      <IssueImg src={image.url}/>
+                      <IssueImgWrapper>
+                        <IssueImg src={image.url}/>
+                        <IssueImgBy>
+                          {imageBy}
+                        </IssueImgBy>
+                      </IssueImgWrapper>
+                      
                       <ArchiveNav>
                         <IssueTitle>{title}</IssueTitle>
                         <StoryListWrapper>
