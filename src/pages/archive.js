@@ -70,7 +70,10 @@ const ArchiveNav = styled.div`
 
 const StoryListItemWrapper = styled.li`
     list-style: none;
-    max-width: 160px;
+
+    @media ${device.mobileL} {
+      max-width: 160px;
+    }
 `
 
 const StoryTitle = styled.p`
