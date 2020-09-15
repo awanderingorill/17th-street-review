@@ -24,7 +24,7 @@ const ArchiveHeader = styled.p`
 
   @media ${device.mobileL} {
     font-size: 20px;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 `
 
@@ -34,7 +34,7 @@ const IssueWrapper = styled.div`
   margin-bottom: 3em;
 
   @media ${device.mobileL} {
-    margin-bottom: 2em;
+    margin-bottom: 0;
   }
 `
 
@@ -44,7 +44,7 @@ const IssueImg = styled.img`
 
   @media ${device.mobileL} {
     max-width: 80vw;
-    max-height: fit-content;
+    max-height: auto;
     margin-left: 2rem;
   }
 `
@@ -67,6 +67,17 @@ const ArchiveNav = styled.div`
   @media ${device.mobileL} {
     margin-left: 2em;
   }
+`
+
+const StoryListWrapper = styled.ul`
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 230px;
+  position: relative;
+  width: fit-content;
+  transform: none;
+  width: 70vw;
+  padding: 0;
 `
 
 const StoryListItemWrapper = styled.li`
@@ -147,7 +158,9 @@ const ArchivePage = () => (
                       <IssueImg src={image.url}/>
                       <ArchiveNav>
                         <IssueTitle>{title}</IssueTitle>
-                        <StoryList stories={story}/>
+                        <StoryListWrapper>
+                          <StoryList stories={story}/>
+                        </StoryListWrapper>
                       </ArchiveNav>
                     </IssueWrapper>
                   )
