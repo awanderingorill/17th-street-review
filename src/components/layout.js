@@ -19,11 +19,16 @@ const GlobalStyle = createGlobalStyle`
     background: #FFFBF4;
     font-family: "Clearface";
     font-size: 18px;
+    line-height: 127.5%;
   }
 
   a {
     text-decoration: none;
     color: #333231;
+  }
+
+  a:hover {
+    transform: rotate(-4deg);
   }
 
   footer {

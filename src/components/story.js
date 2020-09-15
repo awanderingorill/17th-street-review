@@ -11,7 +11,7 @@ const StoryTitle = styled.p`
   font-family: "Souvenir";
   font-size: 25px;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 0.3rem;
 `
 
 const StoryAuthor = styled.p`
