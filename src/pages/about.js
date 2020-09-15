@@ -14,6 +14,10 @@ const AboutWrapper = styled.div`
     align-self: center;
     justify-content: center;
     max-width: 45vw;
+
+    @media ${device.mobileL} {
+        max-width: 80vw;
+    }
 `
 
 const AboutHeader = styled.p`
@@ -22,6 +26,11 @@ const AboutHeader = styled.p`
     text-transform: uppercase;
     margin: 0;
     margin-bottom: 1em;
+
+    @media ${device.mobileL} {
+        font-size: 20px;
+        margin-bottom: 0.5em;
+    }
 `
 
 const AboutContent = styled.div`

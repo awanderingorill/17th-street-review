@@ -21,18 +21,31 @@ const ArchiveHeader = styled.p`
   font-size: 25px;
   margin: 0;
   margin-bottom: 2em;
-}
+
+  @media ${device.mobileL} {
+    font-size: 20px;
+    margin-bottom: 0.5em;
+  }
 `
 
 const IssueWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 3em;
+
+  @media ${device.mobileL} {
+    margin-bottom: 2em;
+  }
 `
 
 const IssueImg = styled.img`
   max-width: 60vw;
   max-height: 100vh;
+
+  @media ${device.mobileL} {
+    max-width: 90vw;
+    margin-left: 1rem;
+  }
 `
 
 const IssueTitle = styled.p`
@@ -40,10 +53,19 @@ const IssueTitle = styled.p`
   font-family: "Souvenir";
   margin: 0;
   margin-bottom: 1em;
+
+  @media ${device.mobileL} {
+    font-size: 20px;
+    margin-top: 1em;
+  }
 `
 
 const ArchiveNav = styled.div`
   margin-left: 3em;
+
+  @media ${device.mobileL} {
+    margin-left: 1em;
+  }
 `
 
 const StoryListItemWrapper = styled.li`
