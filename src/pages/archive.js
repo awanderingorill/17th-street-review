@@ -43,8 +43,8 @@ const IssueImg = styled.img`
   max-height: 100vh;
 
   @media ${device.mobileL} {
-    max-width: 90vw;
-    margin-left: 1rem;
+    max-width: 80vw;
+    margin-left: 2rem;
   }
 `
 
@@ -64,7 +64,7 @@ const ArchiveNav = styled.div`
   margin-left: 3em;
 
   @media ${device.mobileL} {
-    margin-left: 1em;
+    margin-left: 2em;
   }
 `
 
