@@ -24,7 +24,7 @@ const ArchiveHeader = styled.p`
 
   @media ${device.mobileL} {
     font-size: 20px;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 `
 
@@ -35,13 +35,18 @@ const IssueWrapper = styled.div`
   align-items: flex-start;
 
   @media ${device.mobileL} {
-    margin-bottom: 0;
+    justify-content: center;
+    margin-bottom: 1em;
   }
 `
 
 const IssueImg = styled.img`
   max-width: 60vw;
   max-height: 100vh;
+
+  @media ${device.mobileL} {
+    max-width: 80vw;
+  }
 `
 
 const IssueTitle = styled.p`
