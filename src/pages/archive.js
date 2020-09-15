@@ -32,6 +32,7 @@ const IssueWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 3em;
+  align-items: flex-start;
 
   @media ${device.mobileL} {
     margin-bottom: 0;
