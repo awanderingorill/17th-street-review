@@ -42,10 +42,6 @@ const IssueWrapper = styled.div`
 const IssueImg = styled.img`
   max-width: 60vw;
   max-height: 100vh;
-
-  @media ${device.mobileL} {
-    display: none;
-  }
 `
 
 const IssueTitle = styled.p`
