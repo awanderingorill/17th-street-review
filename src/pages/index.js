@@ -67,6 +67,11 @@ const NavAndImgWrapper = styled.div`
   display: flex;
   position: relative;
   left: 300px;
+
+  @media ${device.tablet} {
+    flex-flow: column;
+    left: 0;
+  }
 `
 
 const IntroImg = styled.img`
@@ -77,6 +82,7 @@ const IntroImg = styled.img`
 
   @media ${device.tablet} {
     max-width: 70vw;
+    order: 2;
   }
 
   @media ${device.mobileL} {

@@ -21,6 +21,7 @@ const NavWrapper = styled.ul`
         width: fit-content;
         transform: none;
         width: 70vw;
+        padding: 0;
     }
 
     @media ${device.mobileL} {
