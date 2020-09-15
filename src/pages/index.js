@@ -40,7 +40,7 @@ const IntroWrapper = styled.div`
   }
 `
 
-const IntroTitle = styled.p`
+const IssueTitle = styled.p`
   font-family: "Souvenir";
   font-size: 25px;
 
@@ -50,7 +50,7 @@ const IntroTitle = styled.p`
   }
 `
 
-const IntroContent = styled.p`
+const IssueContent = styled.p`
   @media ${device.mobileL} {
     font-size: 16px;
   }
@@ -58,8 +58,8 @@ const IntroContent = styled.p`
 
 const Intro = props => (
   <IntroWrapper>
-    <IntroTitle>{props.subTitle}</IntroTitle>
-    <IntroContent>{props.indexContent}</IntroContent>
+    <IssueTitle>{props.issueTitle}</IssueTitle>
+    <IssueContent dangerouslySetInnerHTML={{ __html: props.issueContent }}/>
   </IntroWrapper>
 )
 
@@ -74,7 +74,7 @@ const NavAndImgWrapper = styled.div`
   }
 `
 
-const IntroImg = styled.img`
+const IssueImg = styled.img`
   max-width: 63vw;
   position: relative;
   z-index: -1;
@@ -93,63 +93,63 @@ const IntroImg = styled.img`
 
 const IndexPage = () => (
   <Layout>
-    <GlobalFonts />
-    <SEO title="17th Street Review | Winter 2020"/>
-    <StaticQuery
-      query={graphql`
-          query {
-              gcms {
-                pages(where: {slug: "/"}) {
-                  subtitle
-                  homeImage {
-                    url
-                  }
-                  content {
-                    text
-                  }
-                }
-              }
-              gcms {
-                stories(where: {homepageStory: true}) {
-                  title
-                  author
-                  content {
-                    html
+      <GlobalFonts />
+      <StaticQuery
+        query={graphql`
+            query {
+                gcms {
+                  issues(last: 1) {
+                    title
+                    content {
+                      html
+                    }
+                    image {
+                      url
+                    }
                   }
                 }
-              }
-          }
-      `}
-      render={data => (
-          <IndexContainer>
-              {data.gcms.pages.map(page => {
-                  const { subtitle, content, homeImage } = page
-                  return (
-                    <>
-                      <Intro
-                        subTitle={subtitle}
-                        indexContent={content.text}
+                gcms {
+                  stories(where: {homepageStory: true}) {
+                    title
+                    author
+                    content {
+                      html
+                    }
+                  }
+                }
+            }
+        `}
+        render={data => (
+            <IndexContainer>
+                {data.gcms.issues.map(issue => {
+                    const { title, content, image } = issue
+                    return (
+                      <>
+                        <SEO title={"17th Street Review | " + title}/>
+                        <Intro
+                          issueTitle={title}
+                          issueContent={content.html}
+                        />
+                        <NavAndImgWrapper>
+                          <IssueImg src={image.url}/>
+                          <Nav/>
+                        </NavAndImgWrapper>
+                      </>
+                    )
+                })}
+                {data.gcms.stories.map(story => {
+                    const { title, author, content } = story
+                    return (
+                      <Story
+                        storyTitle={title}
+                        storyAuthor={author}
+                        storyContent={content.html}
                       />
-                      <NavAndImgWrapper>
-                        <IntroImg src={homeImage.url}/>
-                        <Nav/>
-                      </NavAndImgWrapper>
-                    </>
-                  )
-              })}
-              {data.gcms.stories.map(story => {
-                  const { title, author, content } = story
-                  return (
-                    <Story
-                      storyTitle={title}
-                      storyAuthor={author}
-                      storyContent={content.html}
-                    />
-                  )
-              })}
-          </IndexContainer>
-      )}
-    />
+                    )
+                })}
+            </IndexContainer>
+        )}
+      />
   </Layout>
 )
 
