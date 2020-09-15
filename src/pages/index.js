@@ -66,11 +66,11 @@ const Intro = props => (
 const NavAndImgWrapper = styled.div`
   display: flex;
   position: relative;
-  left: 150px;
+  left: 300px;
 `
 
 const IntroImg = styled.img`
-  max-width: 60vw;
+  max-width: 63vw;
   position: relative;
   z-index: -1;
   margin-bottom: 4em;
