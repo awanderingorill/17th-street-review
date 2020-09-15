@@ -19,9 +19,9 @@ const Logo = styled.h1`
   line-height: 92.3%;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.80);
+  color: #333231;
   text-decoration: none;
-  width: 300px;
+  width: 350px;
   margin: 0;
   padding: 2rem;
   z-index: 1000;
