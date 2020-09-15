@@ -1,74 +1,134 @@
-// import React from "react"
-// import { Link } from "gatsby"
-// import { StaticQuery } from "gatsby"
-// import styled from "styled-components"
+import React from "react"
+import { Link } from "gatsby"
+import { StaticQuery } from "gatsby"
+import styled from "styled-components"
 
-// import GlobalFonts from "../fonts/fonts"
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
-// import { device } from "../components/device"
+import GlobalFonts from "../fonts/fonts"
+import Layout from "../components/layout"
+import { device } from "../components/device"
 
+const ArchiveContainer = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+`
 
-// const ArchivePage = () => (
-//   <Layout>
-//     <GlobalFonts />
-//     <SEO title="17th Street Review | Winter 2020"/>
-//     <StaticQuery
-//       query={graphql`
-//           query {
-//               gcms {
-//                 issues(last: 1) {
-//                   title
-//                   content {
-//                     html
-//                   }
-//                   image {
-//                     url
-//                   }
-//                 }
-//               }
-//               gcms {
-//                 stories(where: {homepageStory: true}) {
-//                   title
-//                   author
-//                   content {
-//                     html
-//                   }
-//                 }
-//               }
-//           }
-//       `}
-//       render={data => (
-//           <IndexContainer>
-//               {data.gcms.issues.map(issue => {
-//                   const { title, content, image } = issue
-//                   return (
-//                     <>
-//                       <Intro
-//                         issueTitle={title}
-//                         issueContent={content.html}
-//                       />
-//                       <NavAndImgWrapper>
-//                         <IssueImg src={image.url}/>
-//                         <Nav/>
-//                       </NavAndImgWrapper>
-//                     </>
-//                   )
-//               })}
-//               {data.gcms.stories.map(story => {
-//                   const { title, author, content } = story
-//                   return (
-//                     <Story
-//                       storyTitle={title}
-//                       storyAuthor={author}
-//                       storyContent={content.html}
-//                     />
-//                   )
-//               })}
-//           </IndexContainer>
-//       )}
-//     />
-//   </Layout>
-// )
+const ArchiveHeader = styled.p`
+  font-family: "Souvenir";
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 2em;
+}
+`
 
-// export default ArchivePage
+const IssueWrapper = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 3em;
+`
+
+const IssueImg = styled.img`
+  max-width: 60vw;
+  max-height: 100vh;
+`
+
+const IssueTitle = styled.p`
+  font-size: 25px;
+  font-family: "Souvenir";
+  margin: 0;
+  margin-bottom: 1em;
+`
+
+const ArchiveNav = styled.div`
+  margin-left: 3em;
+`
+
+const StoryListItemWrapper = styled.li`
+    list-style: none;
+`
+
+const StoryTitle = styled.p`
+    font-family: "Souvenir";
+    margin: 0 0 0.2rem 0;
+
+    @media ${device.tablet} {
+        margin: 0;
+    }
+
+    @media ${device.mobileL} {
+        font-size: 16px;
+    }
+`
+
+const StoryAuthor = styled.p`
+    margin: 0 0 2rem 0;
+
+    @media ${device.mobileL} {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+`
+
+const StoryList = props => (
+  props.stories.map(story=>{
+    const { title, author, slug } = story
+    return (
+      <StoryListItemWrapper>
+        <Link to={slug}>
+          <StoryTitle>{title}</StoryTitle>
+          <StoryAuthor>{author}</StoryAuthor>
+        </Link>
+      </StoryListItemWrapper>
+    )
+  })
+)
+
+const ArchivePage = () => (
+  <Layout>
+    <GlobalFonts />
+    <StaticQuery
+      query={graphql`
+        query {
+          gcms {
+            issues {
+              title
+              content {
+                html
+              }
+              image {
+                url
+              }
+              story {
+                author
+                title
+                slug
+              }
+            }
+          }
+        }
+      `}
+      render={data => (
+          <ArchiveContainer>
+              <ArchiveHeader>Archive</ArchiveHeader>
+              {data.gcms.issues.map(issue => {
+                  const { title, image, story } = issue
+                  return (
+                    <IssueWrapper>
+                      <IssueImg src={image.url}/>
+                      <ArchiveNav>
+                        <IssueTitle>{title}</IssueTitle>
+                        <StoryList stories={story}/>
+                      </ArchiveNav>
+                    </IssueWrapper>
+                  )
+              })}
+          </ArchiveContainer>
+      )}
+    />
+  </Layout>
+)
+
+export default ArchivePage

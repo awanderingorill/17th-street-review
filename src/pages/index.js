@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { StaticQuery } from "gatsby"
 import styled from "styled-components"
 
@@ -93,12 +92,13 @@ const IssueImg = styled.img`
 
 const IndexPage = () => (
   <Layout>
+      <SEO title="17th Street Review | Winter 2020"/>
       <GlobalFonts />
       <StaticQuery
         query={graphql`
             query {
                 gcms {
-                  issues(last: 1) {
+                  issues(where: {currentIssue: true}) {
                     title
                     content {
                       html
@@ -125,7 +125,6 @@ const IndexPage = () => (
                     const { title, content, image } = issue
                     return (
                       <>
-                        <SEO title={"17th Street Review | " + title}/>
                         <Intro
                           issueTitle={title}
                           issueContent={content.html}
