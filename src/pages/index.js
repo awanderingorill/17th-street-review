@@ -66,6 +66,7 @@ const NavAndImgWrapper = styled.div`
   display: flex;
   position: relative;
   left: 300px;
+  align-items: flex-start;
 
   @media ${device.tablet} {
     flex-flow: column;

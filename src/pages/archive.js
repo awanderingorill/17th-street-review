@@ -32,6 +32,7 @@ const IssueWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 3em;
+  align-items: flex-start;
 
   @media ${device.mobileL} {
     margin-bottom: 0;
@@ -41,10 +42,6 @@ const IssueWrapper = styled.div`
 const IssueImg = styled.img`
   max-width: 60vw;
   max-height: 100vh;
-
-  @media ${device.mobileL} {
-    display: none;
-  }
 `
 
 const IssueTitle = styled.p`
