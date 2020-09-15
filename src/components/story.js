@@ -22,6 +22,10 @@ const StoryTitle = styled.p`
   text-align: center;
   margin: 0;
   margin-bottom: 0.5rem;
+
+  @media ${device.mobileL} {
+    font-size: 20px;
+  }
 `
 
 const StoryAuthor = styled.p`
