@@ -31,7 +31,7 @@ const Logo = styled.h1`
     font-size: 30px;
   }
 `
-const ArchiveAndAbout = styled.ul`
+const HeaderNav = styled.ul`
   font-size: 16px;
   list-style: none;
   margin: 0;
@@ -45,6 +45,7 @@ const ArchiveAndAbout = styled.ul`
   @media ${device.mobileL} {
     font-size: 14px;
     padding: 2rem 1rem;
+    right: 0;
   }
 `
 const Header = ({ siteTitle }) => (
@@ -54,7 +55,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Logo>
       </Link>
-      <ArchiveAndAbout>
+      <HeaderNav>
         <li>
           <Link to="/archive">
             Archive
@@ -65,7 +66,7 @@ const Header = ({ siteTitle }) => (
             About
           </Link>
         </li>
-      </ArchiveAndAbout>
+      </HeaderNav>
   </HeaderWrapper>
 )
 

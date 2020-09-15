@@ -12,6 +12,7 @@ const StoryWrapper = styled.div`
 
   @media ${device.mobileL} {
     max-width: 80vw;
+    margin-bottom: 1em;
   }
 `
 
