@@ -24,7 +24,9 @@ const AboutHeader = styled.p`
     margin-bottom: 1em;
 `
 
-const AboutContent = styled.div``
+const AboutContent = styled.div`
+    margin-bottom: 2em;
+`
 
 const AboutPage = () => (
   <Layout>

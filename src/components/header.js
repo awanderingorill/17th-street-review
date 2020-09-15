@@ -66,11 +66,6 @@ const Header = ({ siteTitle }) => (
             About
           </Link>
         </li>
-        <li>
-          <Link to="/submit">
-            Submit
-          </Link>
-        </li>
       </HeaderNav>
   </HeaderWrapper>
 )
