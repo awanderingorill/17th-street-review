@@ -20,7 +20,7 @@ const NavItemWrapper = styled.li`
 
 const StoryTitle = styled.p`
     font-family: "Souvenir";
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.2rem 0;
 `
 
 const StoryAuthor = styled.p`
@@ -29,10 +29,10 @@ const StoryAuthor = styled.p`
 
 const NavItem = props => (
     <NavItemWrapper>
-        <a href={props.slug}>
+        <Link to={props.slug}>
             <StoryTitle>{props.title}</StoryTitle>
             <StoryAuthor>{props.author}</StoryAuthor>
-        </a>
+        </Link>
     </NavItemWrapper>
 )
 
@@ -45,6 +45,7 @@ export default function Nav () {
                         stories {
                             title
                             author
+                            slug
                         }
                     }
                 }
@@ -52,9 +53,9 @@ export default function Nav () {
             render={data => (
                 <NavWrapper>
                     {data.gcms.stories.map(story => {
-                        const { title, author } = story
+                        const { title, author, slug } = story
                         return (
-                            <NavItem title={title} author={author} />
+                            <NavItem title={title} author={author} slug={slug}/>
                         )
                     })}
                 </NavWrapper>

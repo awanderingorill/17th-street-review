@@ -12,11 +12,10 @@ import { createGlobalStyle } from "styled-components"
 
 import Header from "./header"
 import Nav from "./nav"
-// import "./layout.css"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: rgba(0, 0, 0, 0.80);
+    color: #333231;
     background: #FFFBF4;
     font-family: "Clearface";
     font-size: 18px;
@@ -24,7 +23,11 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.80);
+    color: #333231;
+  }
+
+  footer {
+    text-align: center;
   }
 `
 
