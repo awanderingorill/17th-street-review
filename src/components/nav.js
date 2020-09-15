@@ -10,7 +10,7 @@ const NavWrapper = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
-    padding-left: 5em;
+    padding-left: 4em;
     width: 230px;
     
     @media ${device.tablet} { 
