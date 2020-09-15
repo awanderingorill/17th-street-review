@@ -39,7 +39,7 @@ const ArchiveAndAbout = styled.ul`
 
   @media ${device.tablet} {
     position: absolute;
-    right: 0;
+    right: 50px;
   }
 
   @media ${device.mobileL} {
