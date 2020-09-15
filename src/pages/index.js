@@ -79,7 +79,6 @@ const IssueImg = styled.img`
 
   @media ${device.tablet} {
     max-width: 70vw;
-    order: 2;
   }
 
   @media ${device.mobileL} {
@@ -96,6 +95,10 @@ const ImageBy = styled.p`
 
 const ImgWrapper = styled.div`
   margin-bottom: 3em;
+
+  @media ${device.tablet} {
+    order: 2;
+  }
 
   @media ${device.mobileL} {
     margin-bottom: 1em;
