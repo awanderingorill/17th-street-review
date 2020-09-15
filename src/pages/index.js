@@ -76,9 +76,6 @@ const NavAndImgWrapper = styled.div`
 
 const IssueImg = styled.img`
   max-width: 63vw;
-  position: relative;
-  z-index: -1;
-  margin-bottom: 4em;
 
   @media ${device.tablet} {
     max-width: 70vw;
@@ -87,7 +84,21 @@ const IssueImg = styled.img`
 
   @media ${device.mobileL} {
     max-width: 80vw;
-    margin-bottom: 2em;
+  }
+`
+
+const ImageBy = styled.p`
+  justify-content: flex-end;
+  display: flex;
+  font-size: 14px;
+  margin: 0;
+`
+
+const ImgWrapper = styled.div`
+  margin-bottom: 3em;
+
+  @media ${device.mobileL} {
+    margin-bottom: 1em;
   }
 `
 
@@ -107,6 +118,7 @@ const IndexPage = () => (
                     image {
                       url
                     }
+                    imageBy
                   }
                 }
                 gcms {
@@ -123,7 +135,7 @@ const IndexPage = () => (
         render={data => (
             <IndexContainer>
                 {data.gcms.issues.map(issue => {
-                    const { title, content, image } = issue
+                    const { title, content, image, imageBy } = issue
                     return (
                       <>
                         <Intro
@@ -131,7 +143,10 @@ const IndexPage = () => (
                           issueContent={content.html}
                         />
                         <NavAndImgWrapper>
-                          <IssueImg src={image.url}/>
+                          <ImgWrapper>
+                            <IssueImg src={image.url}/>
+                            <ImageBy>{imageBy}</ImageBy>
+                          </ImgWrapper>
                           <Nav/>
                         </NavAndImgWrapper>
                       </>
