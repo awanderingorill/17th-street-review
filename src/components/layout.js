@@ -40,6 +40,13 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
+const Footer = styled.footer`
+  @media ${device.mobileL} {
+    font-size: 16px;
+    margin: 2rem;
+  }
+`
+
 const SiteWrapper = styled.div`
   display: flex;
   flex-flow: column;
@@ -66,9 +73,9 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       {children}
-      <footer>
+      <Footer>
         © {new Date().getFullYear()} 17th Street Review
-      </footer>
+      </Footer>
     </SiteWrapper>
   )
 }
