@@ -101,7 +101,7 @@ const Story = props => (
   <StoryWrapper>
     <StoryTitle>{props.storyTitle}</StoryTitle>
     <StoryAuthor>{props.storyAuthor}</StoryAuthor>
-    <StoryContent dangerouslySetInnerHTML={{ __html: props.storyContent }} />
+    <StoryContent dangerouslySetInnerHTML={{ __html: props.storyContent }}/>
   </StoryWrapper>
 )
 
