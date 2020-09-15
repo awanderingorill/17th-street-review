@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { device } from "./device"
 
 const StoryWrapper = styled.div`
-  margin: 0 0 3em 0;
+  margin: 0 0 2em 0;
   max-width: 45vw;
 
   @media ${device.tablet} {
