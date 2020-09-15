@@ -10,10 +10,8 @@ const NavWrapper = styled.ul`
     list-style: none;
     margin: 0;
     padding: 0;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    padding-left: 4em;
+    width: 230px;
     
     @media ${device.tablet} { 
         display: flex;
@@ -23,6 +21,7 @@ const NavWrapper = styled.ul`
         width: fit-content;
         transform: none;
         width: 70vw;
+        padding: 0;
     }
 
     @media ${device.mobileL} {
@@ -73,7 +72,7 @@ export default function Nav () {
             query={graphql`
                 query {
                     gcms {
-                        stories {
+                        stories(last: 6) {
                             title
                             author
                             slug

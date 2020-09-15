@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Story from "../components/story"
 import Nav from "../components/nav"
+import { device } from "../components/device"
 
 const StoryPageContainer = styled.div`
   display: flex;
@@ -13,6 +14,20 @@ const StoryPageContainer = styled.div`
   align-items: flex-end;
   justify-content: flex-end;
   max-width: 70vw;
+`
+
+const StoryPageNavWrapper = styled.div`
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @media ${device.tablet} {
+    position: relative;
+    right: 0;
+    top: 0;
+    transform: none;
+  }
 `
 
 const StoryPage = ({ pageContext }) => {
@@ -28,7 +43,9 @@ const StoryPage = ({ pageContext }) => {
                 storyContent={story.content.html}
             />
         </StoryPageContainer>
-        <Nav/>
+        <StoryPageNavWrapper>
+         <Nav/>
+        </StoryPageNavWrapper>
       </Layout>
     )
   }

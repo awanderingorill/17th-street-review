@@ -63,14 +63,26 @@ const Intro = props => (
   </IntroWrapper>
 )
 
+const NavAndImgWrapper = styled.div`
+  display: flex;
+  position: relative;
+  left: 300px;
+
+  @media ${device.tablet} {
+    flex-flow: column;
+    left: 0;
+  }
+`
+
 const IntroImg = styled.img`
-  max-width: 60vw;
+  max-width: 63vw;
   position: relative;
   z-index: -1;
   margin-bottom: 4em;
 
   @media ${device.tablet} {
     max-width: 70vw;
+    order: 2;
   }
 
   @media ${device.mobileL} {
@@ -118,8 +130,10 @@ const IndexPage = () => (
                         subTitle={subtitle}
                         indexContent={content.text}
                       />
-                      <Nav/>
-                      <IntroImg src={homeImage.url}/>
+                      <NavAndImgWrapper>
+                        <IntroImg src={homeImage.url}/>
+                        <Nav/>
+                      </NavAndImgWrapper>
                     </>
                   )
               })}
