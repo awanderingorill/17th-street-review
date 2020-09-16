@@ -15,6 +15,10 @@ const AboutWrapper = styled.div`
     justify-content: center;
     max-width: 45vw;
 
+    @media ${device.tablet} {
+      max-width: 70vw;
+    }
+
     @media ${device.mobileL} {
         max-width: 80vw;
     }
