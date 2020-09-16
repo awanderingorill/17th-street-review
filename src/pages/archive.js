@@ -34,6 +34,11 @@ const IssueWrapper = styled.div`
   margin-bottom: 3em;
   align-items: flex-start;
 
+  @media ${device.tablet} {
+    max-width: 70vw;
+    flex-flow: row;
+  }
+
   @media ${device.mobileL} {
     justify-content: center;
     margin-bottom: 1em;
@@ -46,6 +51,11 @@ const IssueImgWrapper = styled.div`
 const IssueImg = styled.img`
   max-width: 60vw;
   max-height: 100vh;
+
+  @media ${device.tablet} {
+    max-width: 40vw;
+    flex-flow: row;
+  }
 
   @media ${device.mobileL} {
     max-width: 80vw;
