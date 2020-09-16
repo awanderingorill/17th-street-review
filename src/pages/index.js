@@ -42,10 +42,10 @@ const IntroWrapper = styled.div`
 const IssueTitle = styled.p`
   font-family: "Souvenir";
   font-size: 25px;
+  margin-top: 0;
 
   @media ${device.mobileL} {
     font-size: 20px;
-    margin-top: 0;
   }
 `
 
