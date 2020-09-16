@@ -40,6 +40,8 @@ const IssueWrapper = styled.div`
   }
 
   @media ${device.mobileL} {
+    max-width: 80vw;
+    flex-flow: column;
     justify-content: center;
     margin-bottom: 1em;
   }
