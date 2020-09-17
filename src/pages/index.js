@@ -79,8 +79,8 @@ const IssueImg = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 63vw;
-  height: 63vw;
+  width: 100vh;
+  height: 100vh;
   background: linear-gradient(180deg, #E4C3B5 0%, #FFF0A3 100%);
 
   @media ${device.tablet} {
