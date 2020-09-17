@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery } from "gatsby"
 import styled from "styled-components"
+import { keyframes } from "styled-components"
 
 import GlobalFonts from "../fonts/fonts"
 import Layout from "../components/layout"
@@ -74,16 +75,34 @@ const NavAndImgWrapper = styled.div`
   }
 `
 
-const IssueImg = styled.img`
-  max-width: 63vw;
+const IssueImg = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 63vw;
+  height: 63vw;
+  background: linear-gradient(180deg, #E4C3B5 0%, #FFF0A3 100%);
 
   @media ${device.tablet} {
-    max-width: 70vw;
+    width: 70vw;
   }
 
   @media ${device.mobileL} {
-    max-width: 80vw;
+    width: 80vw;
   }
+`
+
+const Pulse = keyframes`
+  to {
+      transform: scale(1.1);
+  }
+`
+
+const IssueImgRadialGradient = styled.div`
+  height: 50vw;
+  width: 50vw;
+  background: radial-gradient(50% 50% at 50% 50%, #5546FF 45.31%, rgba(34, 118, 32, 0.29) 73.44%, rgba(166, 211, 170, 0) 100%);
+  animation: ${Pulse} 1s ease-in-out infinite alternate;
 `
 
 const ImageBy = styled.p`
@@ -147,7 +166,10 @@ const IndexPage = () => (
                         />
                         <NavAndImgWrapper>
                           <ImgWrapper>
-                            <IssueImg src={image.url}/>
+                            <IssueImg>
+                              <IssueImgRadialGradient>
+                              </IssueImgRadialGradient>
+                            </IssueImg>
                             <ImageBy>{imageBy}</ImageBy>
                           </ImgWrapper>
                           <Nav/>
