@@ -35,10 +35,10 @@ const NavItemWrapper = styled.li`
 `
 
 const PieceGenre = styled.p`
-margin: 0;
-text-transform: uppercase;
-font-family: "Souvenir";
-font-size: 12px;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Souvenir";
+    font-size: 10px;
 `
 
 const PieceTitle = styled.p`

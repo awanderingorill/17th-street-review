@@ -119,7 +119,7 @@ const PieceGenre = styled.p`
   margin: 0;
   text-transform: uppercase;
   font-family: "Souvenir";
-  font-size: 12px;
+  font-size: 10px;
 `
 
 const PieceTitle = styled.p`
