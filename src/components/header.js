@@ -35,7 +35,7 @@ const HeaderNav = styled.ul`
   font-size: 16px;
   list-style: none;
   margin: 0;
-  padding: 2rem;
+  padding: 2rem 5rem;
 
   @media ${device.tablet} {
     position: absolute;
