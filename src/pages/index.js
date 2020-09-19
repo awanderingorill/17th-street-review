@@ -12,8 +12,8 @@ import Nav from "../components/nav"
 const IndexContainer = styled.div`
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
   max-width: 70vw;
 
   @media ${device.tablet} {
