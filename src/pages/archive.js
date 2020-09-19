@@ -97,7 +97,7 @@ const PieceListWrapper = styled.ul`
   @media ${device.mobileL} {
     display: flex;
     flex-flow: column wrap;
-    max-height: 230px;
+    max-height: 500px;
     position: relative;
     width: fit-content;
     transform: none;
