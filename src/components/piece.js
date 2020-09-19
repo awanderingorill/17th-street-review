@@ -45,10 +45,10 @@ const PieceContent = styled.div`
 
 const Piece = props => (
   <PieceWrapper>
-    <PieceTitle>{props.storyTitle}</PieceTitle>
-    <PieceAuthor>{props.storyAuthor}</PieceAuthor>
+    <PieceTitle>{props.pieceTitle}</PieceTitle>
+    <PieceAuthor>{props.pieceAuthor}</PieceAuthor>
     <PieceContent dangerouslySetInnerHTML={{ __html: props.pieceContent }}/>
   </PieceWrapper>
 )
 
-export default Story
+export default Piece

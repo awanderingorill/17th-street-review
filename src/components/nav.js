@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-// import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import { StaticQuery } from "gatsby"
@@ -35,7 +34,7 @@ const NavItemWrapper = styled.li`
     }
 `
 
-const StoryTitle = styled.p`
+const PieceTitle = styled.p`
     font-family: "Souvenir";
     margin: 0 0 0.2rem 0;
 
@@ -48,7 +47,7 @@ const StoryTitle = styled.p`
     }
 `
 
-const StoryAuthor = styled.p`
+const PieceAuthor = styled.p`
     margin: 0 0 2rem 0;
 
     @media ${device.mobileL} {
@@ -60,8 +59,8 @@ const StoryAuthor = styled.p`
 const NavItem = props => (
     <NavItemWrapper>
         <Link to={props.slug}>
-            <StoryTitle>{props.title}</StoryTitle>
-            <StoryAuthor>{props.author}</StoryAuthor>
+            <PieceTitle>{props.title}</PieceTitle>
+            <PieceAuthor>{props.author}</PieceAuthor>
         </Link>
     </NavItemWrapper>
 )
@@ -72,7 +71,7 @@ export default function Nav () {
             query={graphql`
                 query {
                     gcms {
-                        stories(last: 6) {
+                        pieces(last: 6) {
                             title
                             author
                             slug
@@ -82,8 +81,8 @@ export default function Nav () {
             `}
             render={data => (
                 <NavWrapper>
-                    {data.gcms.stories.map(story => {
-                        const { title, author, slug } = story
+                    {data.gcms.pieces.map(piece => {
+                        const { title, author, slug } = piece
                         return (
                             <NavItem title={title} author={author} slug={slug}/>
                         )
