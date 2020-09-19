@@ -13,6 +13,7 @@ import styled from "styled-components"
 
 import Header from "./header"
 import { device } from "./device"
+import "./layout.css"
 
 const GlobalStyle = createGlobalStyle`
   body {
