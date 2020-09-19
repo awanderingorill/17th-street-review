@@ -115,6 +115,13 @@ const PieceListItemWrapper = styled.li`
     }
 `
 
+const PieceGenre = styled.p`
+  margin: 0;
+  text-transform: uppercase;
+  font-family: "Souvenir";
+  font-size: 12px;
+`
+
 const PieceTitle = styled.p`
     font-family: "Souvenir";
     margin: 0 0 0.2rem 0;
@@ -139,10 +146,11 @@ const PieceAuthor = styled.p`
 
 const PieceList = props => (
   props.pieces.map(piece=>{
-    const { title, author, slug } = piece
+    const { title, author, slug, genre } = piece
     return (
       <PieceListItemWrapper>
         <Link to={slug}>
+          <PieceGenre>{genre}</PieceGenre>
           <PieceTitle>{title}</PieceTitle>
           <PieceAuthor>{author}</PieceAuthor>
         </Link>
@@ -171,6 +179,7 @@ const ArchivePage = () => (
                 title
                 author
                 slug
+                genre
               }
             }
           }
