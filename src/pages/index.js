@@ -12,8 +12,8 @@ import Nav from "../components/nav"
 const IndexContainer = styled.div`
   display: flex;
   flex-flow: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   max-width: 70vw;
 
   @media ${device.tablet} {
@@ -76,6 +76,7 @@ const NavAndImgWrapper = styled.div`
 
 const IssueImg = styled.img`
   max-width: 63vw;
+  max-height: 100vh;
 
   @media ${device.tablet} {
     max-width: 70vw;

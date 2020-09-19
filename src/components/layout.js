@@ -12,7 +12,6 @@ import { createGlobalStyle } from "styled-components"
 import styled from "styled-components"
 
 import Header from "./header"
-import Nav from "./nav"
 import { device } from "./device"
 
 const GlobalStyle = createGlobalStyle`

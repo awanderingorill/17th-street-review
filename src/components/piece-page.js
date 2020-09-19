@@ -39,7 +39,7 @@ const PiecePage = ({ pageContext }) => {
     return (
       <Layout>
         <GlobalFonts />
-        <SEO title={story.title}/>
+        <SEO title={piece.title}/>
         <PiecePageContainer>
             <Piece
                 pieceTitle={piece.title}

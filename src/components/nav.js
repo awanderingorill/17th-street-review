@@ -71,7 +71,7 @@ export default function Nav () {
             query={graphql`
                 query {
                     gcms {
-                        pieces(last: 6) {
+                        pieces(where: {issue: {currentIssue: true}}) {
                             title
                             author
                             slug
