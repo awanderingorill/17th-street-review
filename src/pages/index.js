@@ -5,7 +5,7 @@ import styled from "styled-components"
 import GlobalFonts from "../fonts/fonts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Story from "../components/story"
+import Piece from "../components/piece"
 import { device } from "../components/device"
 import Nav from "../components/nav"
 
@@ -125,7 +125,7 @@ const IndexPage = () => (
                   }
                 }
                 gcms {
-                  stories(where: {homepageStory: true}) {
+                  pieces(where: {homepagePiece: true}) {
                     title
                     author
                     content {
@@ -155,13 +155,13 @@ const IndexPage = () => (
                       </>
                     )
                 })}
-                {data.gcms.stories.map(story => {
-                    const { title, author, content } = story
+                {data.gcms.pieces.map(piece => {
+                    const { title, author, content } = piece
                     return (
-                      <Story
-                        storyTitle={title}
-                        storyAuthor={author}
-                        storyContent={content.html}
+                      <Piece
+                        pieceTitle={title}
+                        pieceAuthor={author}
+                        pieceContent={content.html}
                       />
                     )
                 })}

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { device } from "./device"
 
-const StoryWrapper = styled.div`
+const PieceWrapper = styled.div`
   margin: 0 0 2em 0;
   max-width: 45vw;
 
@@ -16,7 +16,7 @@ const StoryWrapper = styled.div`
   }
 `
 
-const StoryTitle = styled.p`
+const PieceTitle = styled.p`
   font-family: "Souvenir";
   font-size: 25px;
   text-align: center;
@@ -28,7 +28,7 @@ const StoryTitle = styled.p`
   }
 `
 
-const StoryAuthor = styled.p`
+const PieceAuthor = styled.p`
   text-align: center;
   margin-top: 0;
 
@@ -37,18 +37,18 @@ const StoryAuthor = styled.p`
   }
 `
 
-const StoryContent = styled.div`
+const PieceContent = styled.div`
   @media ${device.mobileL} {
     font-size: 16px;
   }
 `
 
-const Story = props => (
-  <StoryWrapper>
-    <StoryTitle>{props.storyTitle}</StoryTitle>
-    <StoryAuthor>{props.storyAuthor}</StoryAuthor>
-    <StoryContent dangerouslySetInnerHTML={{ __html: props.storyContent }}/>
-  </StoryWrapper>
+const Piece = props => (
+  <PieceWrapper>
+    <PieceTitle>{props.storyTitle}</PieceTitle>
+    <PieceAuthor>{props.storyAuthor}</PieceAuthor>
+    <PieceContent dangerouslySetInnerHTML={{ __html: props.pieceContent }}/>
+  </PieceWrapper>
 )
 
 export default Story

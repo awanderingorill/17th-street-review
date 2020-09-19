@@ -91,7 +91,7 @@ const ArchiveNav = styled.div`
   }
 `
 
-const StoryListWrapper = styled.ul`
+const PieceListWrapper = styled.ul`
   padding: 0;
 
   @media ${device.mobileL} {
@@ -107,7 +107,7 @@ const StoryListWrapper = styled.ul`
   }
 `
 
-const StoryListItemWrapper = styled.li`
+const PieceListItemWrapper = styled.li`
     list-style: none;
 
     @media ${device.mobileL} {
@@ -115,7 +115,7 @@ const StoryListItemWrapper = styled.li`
     }
 `
 
-const StoryTitle = styled.p`
+const PieceTitle = styled.p`
     font-family: "Souvenir";
     margin: 0 0 0.2rem 0;
 
@@ -128,7 +128,7 @@ const StoryTitle = styled.p`
     }
 `
 
-const StoryAuthor = styled.p`
+const PieceAuthor = styled.p`
     margin: 0 0 2rem 0;
 
     @media ${device.mobileL} {
@@ -137,16 +137,16 @@ const StoryAuthor = styled.p`
     }
 `
 
-const StoryList = props => (
-  props.stories.map(story=>{
-    const { title, author, slug } = story
+const PieceList = props => (
+  props.pieces.map(piece=>{
+    const { title, author, slug } = piece
     return (
-      <StoryListItemWrapper>
+      <PieceListItemWrapper>
         <Link to={slug}>
-          <StoryTitle>{title}</StoryTitle>
-          <StoryAuthor>{author}</StoryAuthor>
+          <PieceTitle>{title}</PieceTitle>
+          <PieceAuthor>{author}</PieceAuthor>
         </Link>
-      </StoryListItemWrapper>
+      </PieceListItemWrapper>
     )
   })
 )
@@ -167,7 +167,7 @@ const ArchivePage = () => (
                 url
               }
               imageBy
-              story {
+              piece {
                 title
                 author
                 slug
@@ -180,7 +180,7 @@ const ArchivePage = () => (
           <ArchiveContainer>
               <ArchiveHeader>Archive</ArchiveHeader>
               {data.gcms.issues.map(issue => {
-                  const { title, image, imageBy, story } = issue
+                  const { title, image, imageBy, piece } = issue
                   return (
                     <IssueWrapper>
                       <IssueImgWrapper>
@@ -192,9 +192,9 @@ const ArchivePage = () => (
                       
                       <ArchiveNav>
                         <IssueTitle>{title}</IssueTitle>
-                        <StoryListWrapper>
-                          <StoryList stories={story}/>
-                        </StoryListWrapper>
+                        <PieceListWrapper>
+                          <PieceList pieces={piece}/>
+                        </PieceListWrapper>
                       </ArchiveNav>
                     </IssueWrapper>
                   )
