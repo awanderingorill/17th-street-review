@@ -9,6 +9,7 @@ import SEO from "../components/seo"
 import Story from "../components/story"
 import { device } from "../components/device"
 import Nav from "../components/nav"
+import StripeGradient from "../components/stripe-gradient"
 
 const IndexContainer = styled.div`
   display: flex;
@@ -75,13 +76,13 @@ const NavAndImgWrapper = styled.div`
   }
 `
 
-const IssueImg = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const IssueImg = styled.canvas`
   width: 100vh;
   height: 100vh;
-  background: linear-gradient(180deg, #E4C3B5 0%, #FFF0A3 100%);
+  --gradient-color-1: #ef008f; 
+  --gradient-color-2: #6ec3f4; 
+  --gradient-color-3: #7038ff;  
+  --gradient-color-4: #ffba27;
 
   @media ${device.tablet} {
     width: 70vw;
@@ -96,13 +97,6 @@ const Pulse = keyframes`
   to {
       transform: scale(1.1);
   }
-`
-
-const IssueImgRadialGradient = styled.div`
-  height: 50vw;
-  width: 50vw;
-  background: radial-gradient(50% 50% at 50% 50%, #5546FF 45.31%, rgba(34, 118, 32, 0.29) 73.44%, rgba(166, 211, 170, 0) 100%);
-  animation: ${Pulse} 1s ease-in-out infinite alternate;
 `
 
 const ImageBy = styled.p`
@@ -166,10 +160,7 @@ const IndexPage = () => (
                         />
                         <NavAndImgWrapper>
                           <ImgWrapper>
-                            <IssueImg>
-                              <IssueImgRadialGradient>
-                              </IssueImgRadialGradient>
-                            </IssueImg>
+                            <StripeGradient/>
                             <ImageBy>{imageBy}</ImageBy>
                           </ImgWrapper>
                           <Nav/>
