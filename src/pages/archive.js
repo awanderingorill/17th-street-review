@@ -79,7 +79,7 @@ const IssueTitle = styled.p`
 
   @media ${device.mobileL} {
     font-size: 20px;
-    margin-top: 1em;
+    margin-top: 0;
   }
 `
 
