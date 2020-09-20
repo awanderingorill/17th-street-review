@@ -114,7 +114,7 @@ const PieceListWrapper = styled.ul`
   margin-top: 0;
 
   @media ${device.tablet} {
-    max-height: 40vh;
+    max-height: 50vh;
   }
 
   @media ${device.mobileL} {
