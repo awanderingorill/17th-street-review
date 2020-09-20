@@ -53,7 +53,7 @@ const IssueImgWrapper = styled.div`
 
 const IssueImg = styled.img`
   max-width: 60vw;
-  max-height: 100vh;
+  max-height: 90vh;
 
   @media ${device.tablet} {
     flex-flow: row;
