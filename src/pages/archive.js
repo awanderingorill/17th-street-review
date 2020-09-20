@@ -102,7 +102,7 @@ const PieceListWrapper = styled.ul`
   flex-flow: column wrap;
 
   @media ${device.tablet} {
-    max-height: 30vh;
+    max-height: 40vh;
   }
 
   @media ${device.mobileL} {
@@ -121,9 +121,12 @@ const PieceListWrapper = styled.ul`
 const PieceListItemWrapper = styled.li`
     list-style: none;
 
+    @media ${device.tablet} {
+      margin-right: 10px;
+    }
+
     @media ${device.mobileL} {
       max-width: 160px;
-      margin-right: 10px;
     }
 `
 
