@@ -50,6 +50,10 @@ const IssueTitle = styled.p`
 `
 
 const IssueContent = styled.div`
+  & > p {
+    margin-bottom: 0;
+  }
+
   @media ${device.mobileL} {
     font-size: 16px;
   }
