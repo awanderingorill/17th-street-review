@@ -30,7 +30,7 @@ const ArchiveHeader = styled.p`
 
 const IssueWrapper = styled.div`
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   margin-bottom: 3em;
   align-items: flex-start;
 
@@ -44,6 +44,14 @@ const IssueWrapper = styled.div`
     flex-flow: column;
     justify-content: center;
     margin-bottom: 1em;
+  }
+`
+
+const ImgAndPiecesWrapper = styled.div`
+  display: flex;
+
+  @media ${device.mobileL} {
+    flex-flow: column;
   }
 `
 
@@ -114,6 +122,7 @@ const PieceListWrapper = styled.ul`
     width: 80vw;
     padding: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 `
 
@@ -208,19 +217,20 @@ const ArchivePage = () => (
                   const { title, image, imageBy, piece } = issue
                   return (
                     <IssueWrapper>
-                      <IssueImgWrapper>
-                        <IssueImg src={image.url}/>
-                        <IssueImgBy>
-                          {imageBy}
-                        </IssueImgBy>
-                      </IssueImgWrapper>
-                      
-                      <ArchiveNav>
-                        <IssueTitle>{title}</IssueTitle>
-                        <PieceListWrapper>
-                          <PieceList pieces={piece}/>
-                        </PieceListWrapper>
-                      </ArchiveNav>
+                      <IssueTitle>{title}</IssueTitle>
+                      <ImgAndPiecesWrapper>
+                        <IssueImgWrapper>
+                          <IssueImg src={image.url}/>
+                          <IssueImgBy>
+                            {imageBy}
+                          </IssueImgBy>
+                        </IssueImgWrapper>
+                        <ArchiveNav>
+                          <PieceListWrapper>
+                            <PieceList pieces={piece}/>
+                          </PieceListWrapper>
+                        </ArchiveNav>
+                      </ImgAndPiecesWrapper>
                     </IssueWrapper>
                   )
               })}
