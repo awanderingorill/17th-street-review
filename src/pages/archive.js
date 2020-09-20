@@ -35,8 +35,8 @@ const IssueWrapper = styled.div`
   align-items: flex-start;
 
   @media ${device.tablet} {
-    max-width: 70vw;
-    flex-flow: row;
+    width: 70vw;
+    flex-flow: column;
   }
 
   @media ${device.mobileL} {
@@ -48,6 +48,7 @@ const IssueWrapper = styled.div`
 `
 
 const IssueImgWrapper = styled.div`
+  align-self: center;
 `
 
 const IssueImg = styled.img`
@@ -86,8 +87,11 @@ const IssueTitle = styled.p`
 const ArchiveNav = styled.div`
   margin-left: 3em;
 
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin-left: 0;
+  }
+
+  @media ${device.mobileL} {
   }
 `
 
@@ -97,10 +101,14 @@ const PieceListWrapper = styled.ul`
   display: flex;
   flex-flow: column wrap;
 
+  @media ${device.tablet} {
+    max-height: 30vh;
+  }
+
   @media ${device.mobileL} {
     display: flex;
     flex-flow: column wrap;
-    max-height: 500px;
+    max-height: 400px;
     position: relative;
     width: fit-content;
     transform: none;
@@ -115,6 +123,7 @@ const PieceListItemWrapper = styled.li`
 
     @media ${device.mobileL} {
       max-width: 160px;
+      margin-right: 10px;
     }
 `
 
@@ -132,6 +141,7 @@ const PieceTitle = styled.p`
 
     @media ${device.tablet} {
         margin: 0;
+        max-width: 200px;
     }
 
     @media ${device.mobileL} {
