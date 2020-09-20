@@ -32,6 +32,7 @@ const PieceTitle = styled.p`
 const PieceAuthor = styled.p`
   text-align: center;
   margin-top: 0;
+  margin-bottom: 2em;
 
   @media ${device.mobileL} {
     font-size: 16px;
