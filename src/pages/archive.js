@@ -107,6 +107,7 @@ const PieceListWrapper = styled.ul`
   max-height: 100vh;
   display: flex;
   flex-flow: column wrap;
+  margin-top: 0;
 
   @media ${device.tablet} {
     max-height: 40vh;
