@@ -115,6 +115,7 @@ const PieceListWrapper = styled.ul`
 
   @media ${device.tablet} {
     max-height: 50vh;
+    margin-top: 10px;
   }
 
   @media ${device.mobileL} {
@@ -127,7 +128,6 @@ const PieceListWrapper = styled.ul`
     width: 80vw;
     padding: 0;
     margin-bottom: 0;
-    margin-top: 0;
   }
 `
 
