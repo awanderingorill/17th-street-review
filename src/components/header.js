@@ -39,7 +39,7 @@ const HeaderNav = styled.ul`
 
   @media ${device.tablet} {
     position: absolute;
-    right: 50px;
+    right: 0;
   }
 
   @media ${device.mobileL} {
