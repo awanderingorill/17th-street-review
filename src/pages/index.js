@@ -99,7 +99,7 @@ const ImageBy = styled.p`
 `
 
 const ImgWrapper = styled.div`
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 
   @media ${device.tablet} {
     order: 2;
