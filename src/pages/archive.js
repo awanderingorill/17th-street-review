@@ -182,7 +182,7 @@ const ArchivePage = () => (
       query={graphql`
         query {
           gcms {
-            issues(where: {currentIssue_not: true}) {
+            issues(where: {currentIssue_not: true}, orderBy: createdAt_DESC) {
               title
               content {
                 html
