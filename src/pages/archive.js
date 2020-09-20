@@ -125,6 +125,7 @@ const PieceGenre = styled.p`
 const PieceTitle = styled.p`
     font-family: "Souvenir";
     margin: 0 0 0.2rem 0;
+    max-width: 250px;
 
     @media ${device.tablet} {
         margin: 0;
