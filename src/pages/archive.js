@@ -93,6 +93,9 @@ const ArchiveNav = styled.div`
 
 const PieceListWrapper = styled.ul`
   padding: 0;
+  max-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
 
   @media ${device.mobileL} {
     display: flex;
@@ -125,7 +128,7 @@ const PieceGenre = styled.p`
 const PieceTitle = styled.p`
     font-family: "Souvenir";
     margin: 0 0 0.2rem 0;
-    max-width: 250px;
+    max-width: 220px;
 
     @media ${device.tablet} {
         margin: 0;
