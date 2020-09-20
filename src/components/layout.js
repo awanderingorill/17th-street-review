@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
     background: #FFFBF4;
     font-family: "Clearface";
     font-size: 18px;
-    line-height: 127.5%;
     margin: 0;
   }
 
