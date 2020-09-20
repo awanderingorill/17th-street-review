@@ -50,8 +50,11 @@ const IssueWrapper = styled.div`
 const ImgAndPiecesWrapper = styled.div`
   display: flex;
 
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     flex-flow: column;
+  }
+
+  @media ${device.mobileL} {
   }
 `
 
@@ -64,6 +67,7 @@ const IssueImg = styled.img`
   max-height: 90vh;
 
   @media ${device.tablet} {
+    max-width: 70vw;
     flex-flow: row;
   }
 
