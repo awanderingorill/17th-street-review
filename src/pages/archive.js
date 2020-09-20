@@ -56,7 +56,6 @@ const IssueImg = styled.img`
   max-height: 100vh;
 
   @media ${device.tablet} {
-    max-width: 40vw;
     flex-flow: row;
   }
 
