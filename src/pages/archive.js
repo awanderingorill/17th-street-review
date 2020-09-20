@@ -35,7 +35,7 @@ const IssueWrapper = styled.div`
   align-items: flex-start;
 
   @media ${device.tablet} {
-    width: 70vw;
+    max-width: 70vw;
     flex-flow: column;
   }
 
