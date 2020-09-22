@@ -80,7 +80,7 @@ const NavAndImgWrapper = styled.div`
 
 const IssueImg = styled.img`
   max-width: 60vw;
-  max-height: 100vh;
+  max-height: 90vh;
 
   @media ${device.tablet} {
     max-width: 70vw;
