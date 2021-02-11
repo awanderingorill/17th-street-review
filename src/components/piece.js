@@ -5,7 +5,7 @@ import { device } from "./device"
 const PieceWrapper = styled.div`
   margin: 0 0 2em 0;
   max-width: 45vw;
-  align-self: flex-end;
+  align-self: center;
 
   @media ${device.tablet} {
     max-width: 70vw;

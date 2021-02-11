@@ -3,6 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import { StaticQuery } from "gatsby"
 import { device } from "./device"
+import rightArrow from "../images/right-arrow.svg"
 
 const NavWrapper = styled.ul`
     font-size: 18px;
@@ -64,6 +65,7 @@ const PieceAuthor = styled.p`
         margin-bottom: 1rem;
     }
 `
+
 
 const NavItem = props => (
     <NavItemWrapper>

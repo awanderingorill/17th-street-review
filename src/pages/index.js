@@ -12,8 +12,8 @@ import Nav from "../components/nav"
 const IndexContainer = styled.div`
   display: flex;
   flex-flow: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   max-width: 70vw;
 
   @media ${device.tablet} {
@@ -69,8 +69,8 @@ const Intro = props => (
 const NavAndImgWrapper = styled.div`
   display: flex;
   position: relative;
-  left: 300px;
   align-items: flex-start;
+  justify-content: center;
 
   @media ${device.tablet} {
     flex-flow: column;
@@ -112,7 +112,7 @@ const ImgWrapper = styled.div`
 
 const IndexPage = () => (
   <Layout>
-      <SEO title="17th Street Review | Winter 2020"/>
+      <SEO title="17th Street Review | Spring 2021"/>
       <GlobalFonts />
       <StaticQuery
         query={graphql`

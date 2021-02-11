@@ -49,6 +49,7 @@ const Footer = styled.footer`
 const SiteWrapper = styled.div`
   display: flex;
   flex-flow: column;
+  align-items: center;
 
   @media ${device.tablet} {
     justify-content: center;
