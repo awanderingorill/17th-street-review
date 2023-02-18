@@ -37,6 +37,11 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
     margin-bottom: 3rem;
   }
+
+  td {
+    width: 50%;
+    padding-right: 20px;
+  }
 `
 
 const Footer = styled.footer`
