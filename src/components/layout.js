@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Inter";
     font-size: 16px;
     margin: 0;
+    max-width: 95vw;
   }
 
   a {
