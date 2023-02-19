@@ -16,9 +16,11 @@ const ArchiveContainer = styled.div`
 
 const ArchiveHeader = styled.p`
   font-family: "Windsor";
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   text-align: center;
-  text-transform: uppercase;
-  font-size: 25px;
+  font-size: 40px;
   margin: 0;
   margin-bottom: 2em;
 
@@ -83,8 +85,11 @@ const IssueImgBy = styled.p`
 `
 
 const IssueTitle = styled.p`
-  font-size: 25px;
+  font-size: 30px;
   font-family: "Windsor";
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   margin: 0;
   margin-bottom: 1em;
 
