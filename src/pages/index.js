@@ -112,7 +112,7 @@ const ImgWrapper = styled.div`
 
 const IndexPage = () => (
   <Layout>
-      <SEO title="17th | Winter 2023"/>
+      <SEO title="Winter 2023"/>
       <GlobalFonts />
       <StaticQuery
         query={graphql`

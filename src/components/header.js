@@ -9,6 +9,7 @@ const HeaderWrapper = styled.header`
   flex-flow: row;
   justify-content: space-between;
   width: 100%;
+  padding: 2rem 0 0 4rem;
 
   @media ${device.tablet} {
     justify-content: center;
@@ -17,25 +18,27 @@ const HeaderWrapper = styled.header`
 const Logo = styled.h1`
   font-family: "Windsor";
   font-size: 40px;
-  line-height: 92.3%;
-  text-align: center;
-  text-transform: uppercase;
   color: #333231;
   text-decoration: none;
   width: 350px;
   margin: 0;
-  padding: 2rem;
   z-index: 1000;
 
   @media ${device.mobileL} {
     font-size: 30px;
   }
 `
+
+const SubTitle = styled.p`
+  font-family: "Inter";
+  font-size: 16px;
+`
+
 const HeaderNav = styled.ul`
   font-size: 16px;
   list-style: none;
   margin: 0;
-  padding: 2rem 5rem;
+  padding-right: 5rem;
 
   @media ${device.tablet} {
     position: absolute;
@@ -54,6 +57,9 @@ const Header = ({ siteTitle }) => (
         <Logo>
           {siteTitle}
         </Logo>
+        <subTitle>
+          A literary magazine
+        </subTitle>
       </Link>
       <HeaderNav>
         <li>

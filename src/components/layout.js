@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       {children}
       <Footer>
-        © {new Date().getFullYear()} 17th Street Review
+        © {new Date().getFullYear()} 17th Mag
       </Footer>
     </SiteWrapper>
   )

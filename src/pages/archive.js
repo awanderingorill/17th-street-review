@@ -220,7 +220,7 @@ const ArchivePage = () => (
           <ArchiveContainer>
               <ArchiveHeader>Archive</ArchiveHeader>
               {data.gcms.issues.map(issue => {
-                  const { title, image, imageBy, piece, issueNumber } = issue
+                  const { title, image, imageBy, piece } = issue
                   return (
                     <IssueWrapper>
                       <IssueTitle>{title}</IssueTitle>
