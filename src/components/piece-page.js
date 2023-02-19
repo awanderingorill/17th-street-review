@@ -21,7 +21,7 @@ const PiecePageContainer = styled.div`
 `
 
 const PiecePageNavWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   right: 0px;
   top: 50%;
   transform: translate(-50%, -50%);
