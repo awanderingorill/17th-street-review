@@ -42,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
   td {
     width: 50%;
     padding-right: 20px;
+    vertical-align: top;
   }
 
   @media ${device.mobileL} {
