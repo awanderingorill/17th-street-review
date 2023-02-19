@@ -17,8 +17,10 @@ const HeaderWrapper = styled.header`
 `
 const Logo = styled.h1`
   font-family: "Windsor";
-  font-size: 40px;
-  color: #333231;
+  font-size: 50px;
+  color: transparent;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
   text-decoration: none;
   width: 350px;
   margin: 0;
@@ -26,7 +28,10 @@ const Logo = styled.h1`
   line-height: 2rem;
 
   @media ${device.mobileL} {
-    font-size: 30px;
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: black;
   }
 `
 

@@ -41,7 +41,10 @@ const IntroWrapper = styled.div`
 
 const IssueTitle = styled.p`
   font-family: "Windsor";
-  font-size: 25px;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-size: 30px;
   margin-top: 0;
 
   @media ${device.mobileL} {
