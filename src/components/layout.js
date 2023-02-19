@@ -28,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     margin: 0;
     max-width: 1500px;
+    min-width: 70vw;
     line-height: 1.4rem;
   }
 
