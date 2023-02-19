@@ -12,7 +12,7 @@ const NavWrapperWrapper = styled.div`
     padding-left: 4em;
     width: 230px;
 
-    @media ${device.tablet} { 
+    @media ${device.tablet} {
         display: flex;
         flex-flow: column wrap;
         max-height: 230px;
@@ -33,6 +33,10 @@ const NavWrapper = styled.ul`
     position: fixed;
     list-style: none;
     padding: 0;
+
+    @media ${device.tablet} {
+        position: relative;
+    }
 `
 
 const NavItemWrapper = styled.li`    
