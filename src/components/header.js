@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Logo>
         <subTitle>
-          A literary magazine
+          A literary mag
         </subTitle>
       </Link>
       <HeaderNav>
