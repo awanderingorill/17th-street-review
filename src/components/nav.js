@@ -69,7 +69,7 @@ const PieceAuthor = styled.p`
 
 const NavItem = props => (
     <NavItemWrapper>
-        <Link to={props.slug}>
+        <Link to={"https://17th-mag.com/" + props.slug}>
             <PieceGenre>{props.genre}</PieceGenre>
             <PieceTitle>{props.title}</PieceTitle>
             <PieceAuthor>{props.author}</PieceAuthor>
