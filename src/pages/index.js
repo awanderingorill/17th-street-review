@@ -55,7 +55,7 @@ const IssueContent = styled.div`
   }
 
   @media ${device.mobileL} {
-    font-size: 16px;
+    font-size: 14px;
   }
 `
 

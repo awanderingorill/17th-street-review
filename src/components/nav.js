@@ -61,7 +61,7 @@ const PieceAuthor = styled.p`
     margin: 0 0 2rem 0;
 
     @media ${device.mobileL} {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 1rem;
     }
 `

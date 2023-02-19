@@ -14,6 +14,10 @@ const HeaderWrapper = styled.header`
   @media ${device.tablet} {
     justify-content: center;
   }
+
+  @media ${device.mobileL} {
+    padding-bottom: 2rem;
+  }
 `
 const Logo = styled.h1`
   font-family: "Windsor";
@@ -47,7 +51,7 @@ const HeaderNav = styled.ul`
 
   @media ${device.mobileL} {
     font-size: 14px;
-    padding: 2rem 1rem;
+    padding: 0.2rem 3rem;
     right: 0;
   }
 `

@@ -42,6 +42,12 @@ const GlobalStyle = createGlobalStyle`
     width: 50%;
     padding-right: 20px;
   }
+
+  @media ${device.mobileL} {
+    body {
+      font-size: 14px;
+    }
+  }
 `
 
 const Footer = styled.footer`

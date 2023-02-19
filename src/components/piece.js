@@ -34,13 +34,14 @@ const PieceAuthor = styled.p`
   margin-bottom: 2em;
 
   @media ${device.mobileL} {
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 1em;
   }
 `
 
 const PieceContent = styled.div`
   @media ${device.mobileL} {
-    font-size: 16px;
+    font-size: 14px;
   }
 `
 
