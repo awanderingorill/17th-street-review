@@ -16,13 +16,18 @@ import { device } from "./device"
 import "./layout.css"
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    display: flex;
+    justify-content: center;
+  }  
+
   body {
     color: #333231;
     background: #D5D5E2;
     font-family: "Inter";
     font-size: 16px;
     margin: 0;
-    max-width: 95vw;
+    max-width: 1500px;
     line-height: 1.4rem;
   }
 
@@ -36,10 +41,18 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 3rem;
   }
 
+  table {
+    max-width: 600px;
+  }
+
   td {
     width: 50%;
     padding-right: 20px;
     vertical-align: top;
+  }
+
+  p {
+    max-width: 600px;
   }
 
   @media ${device.mobileL} {
