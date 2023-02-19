@@ -27,6 +27,8 @@ const ArchiveHeader = styled.p`
   @media ${device.mobileL} {
     font-size: 20px;
     margin-bottom: 1em;
+    color: black;
+    -webkit-text-stroke-width: 0;
   }
 `
 
@@ -96,6 +98,8 @@ const IssueTitle = styled.p`
   @media ${device.mobileL} {
     font-size: 20px;
     margin-top: 0;
+    color: black;
+    -webkit-text-stroke-width: 0;
   }
 `
 

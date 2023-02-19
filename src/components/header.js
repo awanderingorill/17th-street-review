@@ -19,7 +19,7 @@ const Logo = styled.h1`
   font-family: "Windsor";
   font-size: 50px;
   color: transparent;
-  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   text-decoration: none;
   width: 350px;
@@ -29,9 +29,8 @@ const Logo = styled.h1`
 
   @media ${device.mobileL} {
     font-size: 40px;
-    color: transparent;
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: black;
+    color: black;
+    -webkit-text-stroke-width: 0;
   }
 `
 

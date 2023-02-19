@@ -28,6 +28,8 @@ const PieceTitle = styled.p`
 
   @media ${device.mobileL} {
     font-size: 20px;
+    color: black;
+    -webkit-text-stroke-width: 0;
   }
 `
 
