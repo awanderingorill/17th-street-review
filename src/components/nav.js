@@ -5,14 +5,13 @@ import { StaticQuery } from "gatsby"
 import { device } from "./device"
 import rightArrow from "../images/right-arrow.svg"
 
-const NavWrapper = styled.ul`
+const NavWrapperWrapper = styled.div`
     font-size: 16px;
-    list-style: none;
     margin: 0;
     padding: 0;
     padding-left: 4em;
     width: 230px;
-    
+
     @media ${device.tablet} { 
         display: flex;
         flex-flow: column wrap;
@@ -30,9 +29,12 @@ const NavWrapper = styled.ul`
     }
 `
 
-const NavItemWrapper = styled.li`
+const NavWrapper = styled.ul`
     position: fixed;
-    
+    list-style: none;
+`
+
+const NavItemWrapper = styled.li`    
     @media ${device.mobileL} {
         max-width: 40vw;
     }
@@ -95,14 +97,17 @@ export default function Nav () {
                 }
             `}
             render={data => (
-                <NavWrapper>
-                    {data.gcms.pieces.map(piece => {
-                        const { title, author, slug, genre } = piece
-                        return (
-                            <NavItem title={title} author={author} slug={slug} genre={genre}/>
-                        )
-                    })}
-                </NavWrapper>
+                <NavWrapperWrapper>
+                    <NavWrapper>
+                        {data.gcms.pieces.map(piece => {
+                            const { title, author, slug, genre } = piece
+                            return (
+                                <NavItem title={title} author={author} slug={slug} genre={genre}/>
+                            )
+                        })}
+                    </NavWrapper>
+                </NavWrapperWrapper>
+                
             )}
         />
     )
