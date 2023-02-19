@@ -14,6 +14,7 @@ import styled from "styled-components"
 import Header from "./header"
 import { device } from "./device"
 import "./layout.css"
+import GlobalFonts from "../fonts/fonts"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -95,6 +96,7 @@ const Layout = ({ children }) => {
 
   return (
     <SiteWrapper>
+      <GlobalFonts />
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
       {children}
