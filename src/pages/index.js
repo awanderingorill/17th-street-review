@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery } from "gatsby"
 import styled from "styled-components"
 
+import GlobalFonts from "../fonts/fonts"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Piece from "../components/piece"
@@ -114,6 +115,7 @@ const ImgWrapper = styled.div`
 const IndexPage = () => (
   <Layout>
       <SEO title="Winter 2023"/>
+      <GlobalFonts />
       <StaticQuery
         query={graphql`
             query {
