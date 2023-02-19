@@ -23,6 +23,7 @@ const Logo = styled.h1`
   width: 350px;
   margin: 0;
   z-index: 1000;
+  line-height: 2rem;
 
   @media ${device.mobileL} {
     font-size: 30px;
