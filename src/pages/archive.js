@@ -15,7 +15,7 @@ const ArchiveContainer = styled.div`
 `
 
 const ArchiveHeader = styled.p`
-  font-family: "Souvenir";
+  font-family: "Windsor";
   text-align: center;
   text-transform: uppercase;
   font-size: 25px;
@@ -85,7 +85,7 @@ const IssueImgBy = styled.p`
 
 const IssueTitle = styled.p`
   font-size: 25px;
-  font-family: "Souvenir";
+  font-family: "Windsor";
   margin: 0;
   margin-bottom: 1em;
 
@@ -146,12 +146,12 @@ const PieceListItemWrapper = styled.li`
 const PieceGenre = styled.p`
   margin: 0;
   text-transform: uppercase;
-  font-family: "Souvenir";
+  font-family: "Windsor";
   font-size: 10px;
 `
 
 const PieceTitle = styled.p`
-    font-family: "Souvenir";
+    font-family: "Windsor";
     margin: 0 0 0.2rem 0;
     max-width: 220px;
 
@@ -196,7 +196,7 @@ const ArchivePage = () => (
       query={graphql`
         query {
           gcms {
-            issues(where: {currentIssue_not: true}, orderBy: createdAt_DESC) {
+            issues(where: {currentIssue_not: true}, orderBy: issueNumber_ASC) {
               title
               content {
                 html
@@ -211,6 +211,7 @@ const ArchivePage = () => (
                 slug
                 genre
               }
+              issueNumber
             }
           }
         }
@@ -219,7 +220,7 @@ const ArchivePage = () => (
           <ArchiveContainer>
               <ArchiveHeader>Archive</ArchiveHeader>
               {data.gcms.issues.map(issue => {
-                  const { title, image, imageBy, piece } = issue
+                  const { title, image, imageBy, piece, issueNumber } = issue
                   return (
                     <IssueWrapper>
                       <IssueTitle>{title}</IssueTitle>

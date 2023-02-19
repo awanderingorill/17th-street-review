@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `17th Street Review`,
-    description: `A new literary magazine.`,
+    title: `17th`,
+    description: `A literary magazine`,
     author: `@awanderingorill`,
   },
   plugins: [

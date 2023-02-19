@@ -18,7 +18,7 @@ const PieceWrapper = styled.div`
 `
 
 const PieceTitle = styled.p`
-  font-family: "Souvenir";
+  font-family: "Windsor";
   font-size: 25px;
   text-align: center;
   margin: 0;

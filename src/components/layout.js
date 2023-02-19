@@ -18,9 +18,9 @@ import "./layout.css"
 const GlobalStyle = createGlobalStyle`
   body {
     color: #333231;
-    background: #FFFBF4;
-    font-family: "Clearface";
-    font-size: 18px;
+    background: #D5D5E2;
+    font-family: "Inter";
+    font-size: 16px;
     margin: 0;
   }
 

@@ -40,7 +40,7 @@ const IntroWrapper = styled.div`
 `
 
 const IssueTitle = styled.p`
-  font-family: "Souvenir";
+  font-family: "Windsor";
   font-size: 25px;
   margin-top: 0;
 
@@ -112,7 +112,7 @@ const ImgWrapper = styled.div`
 
 const IndexPage = () => (
   <Layout>
-      <SEO title="17th Street Review | Spring 2021"/>
+      <SEO title="17th | Winter 2023"/>
       <GlobalFonts />
       <StaticQuery
         query={graphql`

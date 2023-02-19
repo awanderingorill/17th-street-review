@@ -6,7 +6,7 @@ import { device } from "./device"
 import rightArrow from "../images/right-arrow.svg"
 
 const NavWrapper = styled.ul`
-    font-size: 18px;
+    font-size: 16px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -39,12 +39,12 @@ const NavItemWrapper = styled.li`
 const PieceGenre = styled.p`
     margin: 0;
     text-transform: uppercase;
-    font-family: "Souvenir";
+    font-family: "Windsor";
     font-size: 10px;
 `
 
 const PieceTitle = styled.p`
-    font-family: "Souvenir";
+    font-family: "Windsor";
     margin: 0 0 0.2rem 0;
     max-width: 250px;
 

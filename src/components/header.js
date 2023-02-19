@@ -15,7 +15,7 @@ const HeaderWrapper = styled.header`
   }
 `
 const Logo = styled.h1`
-  font-family: "Souvenir";
+  font-family: "Windsor";
   font-size: 40px;
   line-height: 92.3%;
   text-align: center;

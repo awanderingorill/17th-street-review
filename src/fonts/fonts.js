@@ -1,21 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 
-import ClearFaceWoff from "./ClearfaceStd-Regular.woff";
-import SouvenirWoff from "./Souvenir-Demi.woff";
+import InterWoff from "./Inter-Regular.woff";
+import WindsorWoff from "./Windsor.woff";
 
 export default createGlobalStyle`
     @font-face {
-        font-family: 'Clearface';
-        src: local('Clearface'), local('Clearface'),
-        url(${ClearFaceWoff}) format('woff');
+        font-family: 'Inter';
+        src: local('Inter'), local('Inter'),
+        url(${InterWoff}) format('woff');
         font-weight: 300;
         font-style: normal;
     }
 
     @font-face {
-        font-family: 'Souvenir';
-        src: local('Souvenir'), local('Souvenir'),
-        url(${SouvenirWoff}) format('woff');
+        font-family: 'Windsor';
+        url(${WindsorWoff}) format('woff');
         font-weight: 300;
         font-style: normal;
     }
