@@ -58,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
   @media ${device.mobileL} {
     body {
       font-size: 14px;
+      line-height: 1.2rem;
     }
   }
 `

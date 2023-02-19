@@ -11,10 +11,6 @@ const HeaderWrapper = styled.header`
   width: 100%;
   padding: 2rem 0 0 4rem;
 
-  @media ${device.tablet} {
-    justify-content: center;
-  }
-
   @media ${device.mobileL} {
     padding-bottom: 2rem;
   }
