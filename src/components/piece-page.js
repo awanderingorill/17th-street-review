@@ -22,7 +22,7 @@ const PiecePageContainer = styled.div`
 
 const PiecePageNavWrapper = styled.div`
   position: absolute;
-  right: -50px;
+  right: 0px;
   top: 50%;
   transform: translate(-50%, -50%);
 
