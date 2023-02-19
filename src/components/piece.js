@@ -21,7 +21,7 @@ const PieceTitle = styled.p`
   font-family: "Windsor";
   font-size: 30px;
   color: transparent;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
   text-align: center;
   margin: 0;
