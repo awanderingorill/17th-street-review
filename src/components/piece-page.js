@@ -23,8 +23,8 @@ const PiecePageContainer = styled.div`
 const PiecePageNavWrapper = styled.div`
   position: fixed;
   right: 0px;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  transform: translate(-100%, -50%);
 
   @media ${device.tablet} {
     position: relative;
