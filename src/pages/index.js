@@ -92,7 +92,6 @@ const IssueImg = styled.img`
 `
 
 const ImageBy = styled.p`
-  justify-content: flex-end;
   display: flex;
   font-size: 14px;
   margin: 0;
