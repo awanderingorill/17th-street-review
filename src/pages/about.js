@@ -24,16 +24,20 @@ const AboutWrapper = styled.div`
 `
 
 const AboutHeader = styled.p`
-    font-family: "Souvenir";
-    font-size: 25px;
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 1em;
+    font-family: "Windsor";
+    color: transparent;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 1rem;
 
-    @media ${device.mobileL} {
-        font-size: 20px;
-        margin-bottom: 0.5em;
-    }
+  @media ${device.mobileL} {
+    font-size: 20px;
+    margin-bottom: 1em;
+    color: black;
+    -webkit-text-stroke-width: 0;
+  }
 `
 
 const AboutContent = styled.div`
