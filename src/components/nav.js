@@ -32,6 +32,7 @@ const NavWrapperWrapper = styled.div`
 const NavWrapper = styled.ul`
     position: fixed;
     list-style: none;
+    padding: 0;
 `
 
 const NavItemWrapper = styled.li`    
