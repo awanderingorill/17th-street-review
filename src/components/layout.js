@@ -30,10 +30,6 @@ const GlobalStyle = createGlobalStyle`
     color: #333231;
   }
 
-  a:hover {
-    transform: rotate(-4deg);
-  }
-
   footer {
     text-align: center;
     margin-bottom: 3rem;
