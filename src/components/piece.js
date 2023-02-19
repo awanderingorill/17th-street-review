@@ -19,7 +19,10 @@ const PieceWrapper = styled.div`
 
 const PieceTitle = styled.p`
   font-family: "Windsor";
-  font-size: 25px;
+  font-size: 30px;
+  color: transparent;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
   text-align: center;
   margin: 0;
 
