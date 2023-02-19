@@ -31,6 +31,8 @@ const NavWrapper = styled.ul`
 `
 
 const NavItemWrapper = styled.li`
+    position: fixed;
+    
     @media ${device.mobileL} {
         max-width: 40vw;
     }
