@@ -14,6 +14,7 @@ export default createGlobalStyle`
 
     @font-face {
         font-family: 'Windsor';
+        src: local('Windsor Demi'), local('Windsor Demi'),
         url(${WindsorWoff}) format('woff');
         font-weight: 300;
         font-style: normal;
