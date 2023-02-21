@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   table {
-    max-width: 600px;
+    max-width: 700px;
   }
 
   td {
@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    max-width: 600px;
+    max-width: 700px;
   }
 
   img {
