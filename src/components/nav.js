@@ -26,6 +26,7 @@ const NavWrapperWrapper = styled.div`
 
     @media ${device.mobileL} {
         width: 80vw;
+        max-height: initial;
     }
 `
 
