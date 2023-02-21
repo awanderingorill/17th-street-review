@@ -34,7 +34,6 @@ const NavWrapper = styled.ul`
     position: fixed;
     list-style: none;
     padding: 0;
-    transform: translate(70%)
 
     @media ${device.tablet} {
         position: relative;

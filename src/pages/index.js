@@ -164,7 +164,7 @@ const IndexPage = () => (
                       </>
                     )
                 })}
-                {data.gcms.pieces.map(piece => {
+                {/* {data.gcms.pieces.map(piece => {
                     const { title, author, content } = piece
                     return (
                       <Piece
@@ -173,7 +173,7 @@ const IndexPage = () => (
                         pieceContent={content.html}
                       />
                     )
-                })}
+                })} */}
             </IndexContainer>
         )}
       />
