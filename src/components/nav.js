@@ -6,7 +6,7 @@ import { device } from "./device"
 import rightArrow from "../images/right-arrow.svg"
 
 const NavWrapperWrapper = styled.div`
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
     padding-left: 4em;

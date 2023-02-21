@@ -44,8 +44,8 @@ const IssueTitle = styled.p`
   color: transparent;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  font-size: 30px;
-  margin-top: 0;
+  font-size: 40px;
+  margin: 0 0 1rem 0;
 
   @media ${device.mobileL} {
     font-size: 20px;

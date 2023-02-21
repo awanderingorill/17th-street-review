@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     color: #333231;
     background: #D5D5E2;
     font-family: "Inter";
-    font-size: 16px;
+    font-size: 18px;
     margin: 0;
     max-width: 1500px;
     min-width: 70vw;
@@ -54,6 +54,7 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     max-width: 700px;
+    line-height: 1.4;
   }
 
   img {

@@ -17,7 +17,7 @@ const HeaderWrapper = styled.header`
 `
 const Logo = styled.h1`
   font-family: "Windsor";
-  font-size: 50px;
+  font-size: 60px;
   color: transparent;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;

@@ -20,7 +20,7 @@ const ArchiveHeader = styled.p`
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   margin: 0;
   margin-bottom: 2em;
 
@@ -87,7 +87,7 @@ const IssueImgBy = styled.p`
 `
 
 const IssueTitle = styled.p`
-  font-size: 30px;
+  font-size: 40px;
   font-family: "Windsor";
   color: transparent;
   -webkit-text-stroke-width: 1.5px;
