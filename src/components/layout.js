@@ -56,10 +56,20 @@ const GlobalStyle = createGlobalStyle`
     max-width: 600px;
   }
 
+  img {
+    max-width: 800px;
+    height: auto;
+  }
+
   @media ${device.mobileL} {
     body {
       font-size: 14px;
       line-height: 1.2rem;
+    }
+
+    img {
+      max-width: 80vw;
+      height: auto;
     }
   }
 `
