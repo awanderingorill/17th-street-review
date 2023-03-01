@@ -58,8 +58,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   img {
-    max-width: 800px;
-    height: auto;
+    width: auto;
+    max-height: 95vh;
   }
 
   @media ${device.mobileL} {
